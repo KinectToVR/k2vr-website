@@ -109,8 +109,8 @@ header p {
 
 #download-button {
     transition: 0.1s;
-    background: #e1e2e4;
-    color: #121730;
+    background: #3A9832;
+    color: #ffffff;
     padding: 15px 20px;
     text-decoration: none;
     border-radius: 4px;
@@ -234,4 +234,41 @@ pre {
         animation: none !important;
         background-color: rgba(255, 255, 255, 0.1) !important;
     }
+}
+/* idiot warning */
+.idiot-warning-container{
+    z-index: -1;
+    margin: 2em auto 2em auto;
+    display: flex;
+    width: 60%;
+    background: #A70000;
+    border-radius: 8px;
+    padding: 1em;
+}
+.fbt-dude{
+    background-image: url("../img/fbt-dude.svg");
+    width:20%;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 1em;
+    min-width: 4em;;
+}
+.idiot-warning-container p{
+    margin:.7em 0;
+}
+.idiot-warning-container h4{
+    margin:.7em 0;
+}
+.idiot-warning-container h4:before{
+    visibility: visible;
+    content:"aaa";
+    background-image: url(../img/warning.svg);
+    display:inline-block;
+    background-size: contain;
+    color:transparent;
+    background-repeat: no-repeat;
+}
+.idiot-warning-container a{
+    color:#ffff00;
 }

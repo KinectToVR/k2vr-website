@@ -32,7 +32,7 @@ html, body {
 body {
     background-color: rgb(34, 44, 93);
     color: #e1e2e4;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: x-large;
     text-rendering: geometricPrecision;
 }

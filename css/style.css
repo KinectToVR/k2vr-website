@@ -26,6 +26,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-wrap: break-word;
 }
 
 body {
@@ -157,8 +158,9 @@ pre {
 }
 
 .iframe-container {
-    margin: 2em auto;
-    width: max-content;
+    margin: 2em 0 2em 0;
+    display: flex;
+    justify-content: center;
 }
 
 :target {
@@ -250,6 +252,7 @@ pre {
     z-index: -1;
     margin: 2em auto 2em auto;
     display: flex;
+    justify-content: center;
     width: 60%;
     background: #A70000;
     border-radius: 8px;
@@ -263,6 +266,7 @@ pre {
     background-repeat: no-repeat;
     margin-right: 1em;
     min-width: 4em;
+    min-height: 9em;
 }
 .idiot-warning-container p{
     margin:.7em 0;
@@ -281,4 +285,32 @@ pre {
 }
 .idiot-warning-container a{
     color:#ffff00;
+}
+
+@media only screen and (max-width: 950px) {
+    header {
+        padding-top: 7vw;
+        padding-bottom: 4vw;
+    }
+    header h1.title {
+        font-size: 10vw;
+    }
+    header p {
+        font-size: 3.7vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .stackedit__html {
+        width: 90%;
+    }
+    .idiot-warning-container, .installer-hero {
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    .hero-image {
+        /* Removed the amount of space added above and below
+           by object-fit to fit it in a square */
+        width: 100%;
+    }
 }

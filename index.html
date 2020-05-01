@@ -52,11 +52,11 @@
             <img class="hero-image" src="./img/hero-image.png">
         </div>
         <div class="stackedit__html">
-            <h1 id="main-header">How to set it all up</h1>
+            <h1 id="main-header">What is KinectToVR?</h1>
             <p>
-                This website aims to accompany Sharky’s KinectToVR software found at
+                KinectToVR is an opensource program created by sharkyh20 for adding leg tracking to VR using a Kinect sensor. 
+                You can find the original source at 
                 <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a>
-                and to answer every possible question one might have.
             </p>
             <p>
                 Join the
@@ -75,13 +75,13 @@
                 trying to line it up with the box of your VR headset.
             </p>
             <p>
-                On the first tab of KinectToVR, after initializing trackers, 2
-                checkboxes will appear towards the bottom for "Enable Kinect Rotation
-                Calibration" and "Enable Kinect Position Calibration", which let you
+                After initializing trackers, two
+                checkboxes will appear towards the bottom for <strong>"Enable Kinect Rotation
+                Calibration" and "Enable Kinect Position Calibration"</strong>, which let you
                 rotate and move the trackers respectively.
             </p>
             <p>
-                Enable one checkbox at a time, and with the SteamVR dashboard closed,
+                <strong>Enable one checkbox at a time</strong>, and with the SteamVR dashboard closed,
                 use the thumbsticks/trackpads on your VR controllers to line up the
                 trackers to your body.
             </p>
@@ -89,29 +89,39 @@
                 Press any of the two triggers (analog buttons on the back of your
                 controllers) to confirm each calibration step. and recheck any of the
                 checkboxes for rotation or position if needed until they're roughly in
-                the right spot.
+                the right spot. <strong>Don't try to align them to a rotation you think works. only align them to your real life movements.</strong> 
+                Especially if you're having issues with <a href="#beat-saber">Beat Saber avatars</a>..
             </p>
             <p>
                 YOU'RE DONE!! Do keep in mind
                 <a href="#k2vr-restart">if your controllers weren't working</a>
                 you will need to start and initialize K2VR twice when you want to play.
             </p>
-            <h2 id="things-you-need-to-know">Things You Need To Know</h2>
-            <p>
+            <h2 id="things-you-need-to-know">Useful Tips and Troubleshooting</h2>
+            <!-- <p>
                 <strong>
                     IGNORE THE TEMPTING GREEN DOWNLOAD BUTTON
                     AND SCROLL DOWN THE PAGE AND READ THE WRITTEN INSTRUCTIONS
                 </strong>
                 (That’s the source code and you would have to compile it)
             </p>
-            <p class="remark">Ignore this when using the installer</p>
+            <p class="remark">Ignore this when using the installer</p> -->
+            <p id="white-screen">
+                If launching KinectToVR while SteamVR is open gives you a white screen. Try launching it as administrator. 
+                Note that if this works, you should consider checking why SteamVR has to be run in an elevated state 
+                in the first place. Because you shouldn't need to.
+            </p>
+            <p id="instant-close">
+                If KinectToVR immediatly closes right after launching it with SteamVR open. It's possible it's due to 
+                the OpenVR-inpuEmulator DLL fix.  To attempt to fix it, find the temp folder created next to the K2VR Installer executable. 
+                Run the ovrie-1.3.exe file in there and let it upgrade the existing install.
+            </p>
             <p id="kinect-positioning">
                 When positioning the Kinect sensor,
-                <strong>you want it high up (above your head preferably) and pointing down.</strong>
-                You need to know that proper skeleton tracking for Xbox 360 Kinect (V1)
-                starts around 3-4 meters away from it, and 2-2.5 meters away for Xbox
-                One Kinect (V2). With that in mind you want the Kinect as far away from
-                you as possible, in the angle where you’re going to play.
+                <strong>you want it high up (above your head preferably) and pointing down.</strong> 
+                Good skeleton tracking for Xbox 360 Kinect starts around 3-4 meters away from it, 
+                and 2-2.5 meters away for Xbox One Kinect. With that in mind you want the Kinect as far away from
+                you as possible, in the angle where you’re going to play. Using the skeleton preview inside KinectToVR can be useful.
             </p>
             <p id="controller-bug">
                 You may encounter a bug where
@@ -165,7 +175,7 @@
                 reference as it uses an older version of the software and is missing
                 some information present in the written instructions.
             </p>
-            <p id="dll-fix">
+            <!-- <p id="dll-fix">
                 <strong>
                     Do not forget to install the DLL fix for OpenVR-Input-Emulator
                     listed in the install instructions.
@@ -174,20 +184,22 @@
                 with the one compiled by Sharky, SteamVR boots into Safe Mode, click
                 exit safe mode, let it restart and click it again. If this doesn’t work.
             </p>
-            <p class="remark">Ignore this when using the installer</p>
-            <p id="steamvr-home">
+            <p class="remark">Ignore this when using the installer</p> -->
+            <!-- <p id="steamvr-home">
                 As you’ll most likely be restarting SteamVR a few times while figuring
                 things out. For your own sanity, go into the SteamVR settings, show
                 advanced settings (bottom-left) and disable the SteamVR Home under
                 General.
-            </p>
+            </p> -->
             <p id="beat-saber">
-                <strong>If you're planning to use this for Beat Saber,</strong>
-                I recommend you use VirtualMotionCapture with the SteamVR camera config
-                file and optionally LIV if you want correct depth mapping with your
-                avatar. The CustomAvatar mod requires manual configuration of each
+                If you're planning to use this for Beat Saber,
+                <strong>Go to the Adv. Trackers tab and enable "Use Head orientation for ALL joints"</strong> and it should fix Beat Saber avatars. <br>
+                This happens because the CustomAvatar mod requires manual configuration of each
                 tracker onto the model in Unity, and KinectToVR spawns the trackers in a
                 different orientation than you would put on actual Vive trackers.
+                I personally recommend you use VirtualMotionCapture with the SteamVR camera config
+                file and optionally LIV if you want correct depth mapping with your
+                avatar.
             </p>
             <p id="launch-order">
                 Remember to launch SteamVR, then KinectToVR, initialize trackers and
@@ -246,7 +258,7 @@
                 is expected to support at least configurations using
                 2 Xbox 360 Kinect sensors in a future update.
             </p>
-            <p id="head-hands">
+            <!-- <p id="head-hands">
                 <strong>Can I use KinectToVR to track my head/hands?</strong>
                 <br />
                 While there are buttons claiming to spawn trackers for other joints in
@@ -254,7 +266,7 @@
                 and crashes the software. I recommend you once again look into getting
                 <a href="https://www.driver4vr.com/">Driver4VR</a>
                 as it can do this no problem.
-            </p>
+            </p> -->
             <p id="sharky">
                 <strong>Where is Sharky?</strong>
                 <br />

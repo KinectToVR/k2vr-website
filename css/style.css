@@ -115,6 +115,16 @@ header p {
     text-decoration: none;
     border-radius: 4px;
 }
+#download-button:before{
+    visibility: visible;
+    content:"aaa";
+    background-image: url(../img/download-icon.svg);
+    display:inline-block;
+    background-size: contain;
+    color:transparent;
+    background-repeat: no-repeat;
+    vertical-align: -webkit-baseline-middle;
+}
 
 #download-button:hover {
     background: rgba(225, 226, 228, 0.75);
@@ -133,7 +143,7 @@ header p {
 }
 
 #discord {
-    color: #6a80ce;
+    color: #7f95e4;
 }
 
 pre {
@@ -252,7 +262,7 @@ pre {
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 1em;
-    min-width: 4em;;
+    min-width: 4em;
 }
 .idiot-warning-container p{
     margin:.7em 0;

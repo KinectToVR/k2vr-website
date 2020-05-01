@@ -76,7 +76,8 @@ header p {
     z-index: -1;
     margin: 2em auto 0 auto;
     display: flex;
-    width: 70%;
+    width: 80%;
+    max-width: 65em;
     background: linear-gradient(90deg, rgb(26, 34, 73) 0%, rgb(18, 23, 49) 100%);
     border-radius: 8px;
     animation-name: hero-entry;
@@ -199,7 +200,8 @@ pre {
 
 .stackedit__html {
     margin: 3em auto;
-    width: 60%;
+    width: 90%;
+    max-width: 50em;
 }
 
 .stackedit__html p {
@@ -253,7 +255,8 @@ pre {
     margin: 2em auto 2em auto;
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 80%;
+    max-width: 50em;
     background: #A70000;
     border-radius: 8px;
     padding: 1em;
@@ -301,11 +304,7 @@ pre {
 }
 
 @media only screen and (max-width: 700px) {
-    .stackedit__html {
-        width: 90%;
-    }
     .idiot-warning-container, .installer-hero {
-        width: 80%;
         flex-wrap: wrap;
     }
     .hero-image {

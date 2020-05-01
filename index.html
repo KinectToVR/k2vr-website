@@ -54,8 +54,8 @@
         <div class="stackedit__html">
             <h1 id="main-header">What is KinectToVR?</h1>
             <p>
-                KinectToVR is an opensource program created by sharkyh20 for adding leg tracking to VR using a Kinect sensor. 
-                You can find the original source at 
+                KinectToVR is an opensource program created by sharkyh20 for adding leg tracking to VR using a Kinect sensor.
+                You can find the original source at
                 <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a>
             </p>
             <p>
@@ -89,7 +89,7 @@
                 Press any of the two triggers (analog buttons on the back of your
                 controllers) to confirm each calibration step. and recheck any of the
                 checkboxes for rotation or position if needed until they're roughly in
-                the right spot. <strong>Don't try to align them to a rotation you think works. only align them to your real life movements.</strong> 
+                the right spot. <strong>Don't try to align them to a rotation you think works. only align them to your real life movements.</strong>
                 Especially if you're having issues with <a href="#beat-saber">Beat Saber avatars</a>..
             </p>
             <p>
@@ -107,8 +107,8 @@
             </p>
             <p class="remark">Ignore this when using the installer</p> -->
             <p id="white-screen">
-                If launching KinectToVR while SteamVR is open gives you a white screen. Try launching it as administrator. 
-                Note that if this works, you should consider checking why SteamVR has to be run in an elevated state 
+                If launching KinectToVR while SteamVR is open gives you a white screen. Try launching it as administrator.
+                Note that if this works, you should consider checking why SteamVR has to be run in an elevated state
                 in the first place. Because you shouldn't need to.
             </p>
             <p id="instant-close">
@@ -118,31 +118,32 @@
             </p>
             <p id="kinect-positioning">
                 When positioning the Kinect sensor,
-                <strong>you want it high up (above your head preferably) and pointing down.</strong> 
-                Good skeleton tracking for Xbox 360 Kinect starts around 3-4 meters away from it, 
+                <strong>you want it high up (above your head preferably) and pointing down.</strong>
+                Good skeleton tracking for Xbox 360 Kinect starts around 3-4 meters away from it,
                 and 2-2.5 meters away for Xbox One Kinect. With that in mind you want the Kinect as far away from
                 you as possible, in the angle where you’re going to play. Using the skeleton preview inside KinectToVR can be useful.
             </p>
-            <p id="controller-bug">
-                You may encounter a bug where
-                <strong>one or both of your hands in VRChat is swapped with the trackers.</strong>
-                and/or one or both of your controllers’ input to SteamVR stops working
-                (Can’t open the dashboard or click on it.) after initializing trackers.
-                If this happens, close out of KinectToVR, launch it again and initialize
-                trackers again. The controllers will start working.<br />
-                You may also need to restart K2VR if the trackers appear in the SteamVR
-                status window, but don't show up in VR.
-                <div id="k2vr-restart">
-                    <p>
-                        If the above happens to you, it means you will need to launch K2VR
-                        and initialize trackers twice anytime you want to play. Hope to have
-                        this fixed or find a workaround for it in the future.
-                    </p>
-                </div>
-            </p>
-            <p id="bindings">
-                <strong>If controller calibration still doesn't work:</strong>
-                <br />
+            <div id="controller-bug">
+                <p>
+                    You may encounter a bug where
+                    <strong>one or both of your hands in VRChat is swapped with the trackers.</strong>
+                    and/or one or both of your controllers’ input to SteamVR stops working
+                    (Can’t open the dashboard or click on it.) after initializing trackers.
+                    If this happens, close out of KinectToVR, launch it again and initialize
+                    trackers again. The controllers will start working.<br />
+                    You may also need to restart K2VR if the trackers appear in the SteamVR
+                    status window, but don't show up in VR.
+                </p>
+                <p id="k2vr-restart">
+                    If the above happens to you, it means you will need to launch K2VR
+                    and initialize trackers twice anytime you want to play. Hope to have
+                    this fixed or find a workaround for it in the future.
+                </p>
+            </div>
+            <div id="bindings">
+                <p>
+                    <strong>If controller calibration still doesn't work:</strong>
+                </p>
                 <ul>
                     <li>
                         <p>
@@ -164,7 +165,7 @@
                         </p>
                     </li>
                 </ul>
-            </p>
+            </div>
             <p id="arrow">
                 The white arrow in SteamVR does not represent the Kinect in 3D space
                 accurately and should be ignored in favor of aligning the trackers with
@@ -205,15 +206,17 @@
                 Remember to launch SteamVR, then KinectToVR, initialize trackers and
                 then launch your game, in that order. Or else things will crash.
             </p>
-            <p id="bootloop">
-                If your Kinect is turning on and off in a loop, make sure its microphone
-                isn’t muted. Press Windows + R to open the Run dialog, and paste in:
+            <div id="bootloop">
+                <p>
+                    If your Kinect is turning on and off in a loop, make sure its microphone
+                    isn’t muted. Press Windows + R to open the Run dialog, and paste in:
+                </p>
                 <pre>control mmsys.cpl,,1</pre>
                 to access recording devices and check on it.
                 <strong>
                     On Xbox 360 Kinect, the green LED flashing indicates normal operation.
                 </strong>
-            </p>
+            </div>
             <p id="not-genuine">
                 If KinectToVR says KINECT_NOT_GENUINE try unplugging and replugging in
                 your Kinect. Possibly in a port used by a different USB controller. Then

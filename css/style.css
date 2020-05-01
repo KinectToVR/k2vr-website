@@ -163,6 +163,10 @@ pre {
     justify-content: center;
 }
 
+.iframe-container > iframe {
+    border: none;
+}
+
 :target {
     animation-name: highlight;
     animation-duration: 3s;

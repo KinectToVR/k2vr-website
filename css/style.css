@@ -119,13 +119,12 @@ header p {
 }
 #download-button:before{
     visibility: visible;
-    content:"aaa";
+    content: "aaa";
     background-image: url(../img/download-icon.svg);
     display:inline-block;
     background-size: contain;
-    color:transparent;
+    color: transparent;
     background-repeat: no-repeat;
-    vertical-align: -webkit-baseline-middle;
 }
 
 #download-button:hover {

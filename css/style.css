@@ -84,18 +84,18 @@ header p {
     animation-duration: 1.3s;
     padding: 1em;
 }
-  
+
 .hero-content {
     display: inline-block;
     width: auto;
     margin: auto 1em;
     transform: translateY(-1em);
 }
-  
+
 .hero-content h1 {
     line-height: 1em;
 }
-  
+
 .hero-image {
     min-width: 0;
     object-fit: contain;
@@ -117,11 +117,12 @@ header p {
     text-decoration: none;
     border-radius: 4px;
 }
-#download-button:before{
+
+#download-button:before {
     visibility: visible;
     content: "aaa";
     background-image: url(../img/download-icon.svg);
-    display:inline-block;
+    display: inline-block;
     background-size: contain;
     color: transparent;
     background-repeat: no-repeat;
@@ -130,7 +131,7 @@ header p {
 #download-button:hover {
     background: rgba(225, 226, 228, 0.75);
 }
-  
+
 #github-link {
     transition: 0.1s;
     color: #e1e2e4;
@@ -239,8 +240,9 @@ pre {
         background-color: rgba(255, 255, 255, 0.1) !important;
     }
 }
+
 /* idiot warning */
-.idiot-warning-container{
+.idiot-warning-container {
     z-index: -1;
     margin: 2em auto 2em auto;
     display: flex;
@@ -251,9 +253,10 @@ pre {
     border-radius: 8px;
     padding: 1em;
 }
-.fbt-dude{
+
+.fbt-dude {
     background-image: url("../img/fbt-dude.svg");
-    width:20%;
+    width: 20%;
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -261,23 +264,27 @@ pre {
     min-width: 4em;
     min-height: 9em;
 }
-.idiot-warning-container p{
-    margin:.7em 0;
+
+.idiot-warning-container p {
+    margin: .7em 0;
 }
-.idiot-warning-container h4{
-    margin:.7em 0;
+
+.idiot-warning-container h4 {
+    margin: .7em 0;
 }
-.idiot-warning-container h4:before{
+
+.idiot-warning-container h4:before {
     visibility: visible;
-    content:"aaa";
+    content: "aaa";
     background-image: url(../img/warning.svg);
-    display:inline-block;
+    display: inline-block;
     background-size: contain;
-    color:transparent;
+    color: transparent;
     background-repeat: no-repeat;
 }
-.idiot-warning-container a{
-    color:#ffff00;
+
+.idiot-warning-container a {
+    color: #ffff00;
 }
 
 @media only screen and (max-width: 950px) {
@@ -285,9 +292,11 @@ pre {
         padding-top: 7vw;
         padding-bottom: 4vw;
     }
+
     header h1.title {
         font-size: 10vw;
     }
+
     header p {
         font-size: 3.7vw;
     }
@@ -297,6 +306,7 @@ pre {
     .idiot-warning-container, .installer-hero {
         flex-wrap: wrap;
     }
+
     .hero-image {
         /* Removed the amount of space added above and below
            by object-fit to fit it in a square */

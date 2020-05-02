@@ -10,6 +10,12 @@
         <meta name="theme-color" content="#3C9C34" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" />
         <link rel="stylesheet" href="./css/style.css" />
+        <script>
+            // enforce https
+            if (location.protocol !== 'https:') {
+                location.replace(`https:${location.href.substring(location.protocol.length)}`);
+            }
+        </script>
     </head>
     <body class="stackedit">
         <header>

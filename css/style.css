@@ -129,7 +129,7 @@ header p {
 }
 
 #download-button:hover {
-    background: rgba(225, 226, 228, 0.75);
+    background: #4dcc42;
 }
 
 #github-link {
@@ -147,7 +147,7 @@ header p {
 
 #discord-link {
     transition: 0.1s;
-    background: #7289da;
+    background: #5b72c5;
     color: #ffffff;
     padding: 15px 20px;
     text-decoration: none;

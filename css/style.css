@@ -123,7 +123,8 @@ header p {
     content: "aaa";
     background-image: url(../img/download-icon.svg);
     display: inline-block;
-    background-size: contain;
+    background-size: 60%;
+    background-position: center left;
     color: transparent;
     background-repeat: no-repeat;
 }
@@ -143,6 +144,28 @@ header p {
 
 #github-link:hover {
     background: rgb(53, 79, 197);
+}
+
+#discord-link:before {
+    visibility: visible;
+    content: "aaa";
+    background-image: url(../img/Discord-Logo-White.svg);
+    display: inline-block;
+    background-size: 80%;
+    background-position: center left;
+    color: transparent;
+    background-repeat: no-repeat;
+}
+
+#github-link:before {
+    visibility: visible;
+    content: "aaa";
+    background-image: url(../img/github-logo.svg);
+    display: inline-block;
+    background-size: 70%;
+    background-position: center left;
+    color: transparent;
+    background-repeat: no-repeat;
 }
 
 #discord-link {

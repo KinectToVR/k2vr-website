@@ -134,14 +134,28 @@ header p {
 
 #github-link {
     transition: 0.1s;
-    color: #e1e2e4;
+    background: #293B8B;
+    color: #ffffff;
     padding: 15px 20px;
     text-decoration: none;
     border-radius: 4px;
 }
 
 #github-link:hover {
-    background: rgba(225, 226, 228, 0.25);
+    background: rgb(53, 79, 197);
+}
+
+#discord-link {
+    transition: 0.1s;
+    background: #7289da;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+#discord-link:hover {
+    background: #8ea6fd;
 }
 
 #discord {

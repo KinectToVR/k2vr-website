@@ -263,9 +263,29 @@ pre {
     color: #ffffff;
 }
 
+.blink {
+    animation: blink-animation 2s steps(3, start) infinite;
+    -webkit-animation: blink-animation 2s steps(3, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
 @media (prefers-reduced-motion: reduce) {
     html, body {
         scroll-behavior: auto;
+    }
+
+    .blink {
+        animation: none!important;
+        -webkit-animation: none!important;
     }
 
     .installer-hero {
@@ -286,7 +306,7 @@ pre {
     justify-content: center;
     width: 80%;
     max-width: 50em;
-    background: #A70000;
+    background: rgb(128, 0, 0);
     border-radius: 8px;
     padding: 1em;
 }

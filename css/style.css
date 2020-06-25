@@ -30,7 +30,7 @@ html, body {
 }
 
 body {
-    background-color: rgb(34, 44, 93);
+    background-color: #09177a;
     color: #e1e2e4;
     font-family: Inter, sans-serif;
     font-size: x-large;
@@ -78,11 +78,12 @@ header p {
     display: flex;
     width: 80%;
     max-width: 65em;
-    background: linear-gradient(90deg, rgb(26, 34, 73) 0%, rgb(18, 23, 49) 100%);
+    background: linear-gradient(90deg, #1123ac, #0e1e97);
     border-radius: 8px;
     animation-name: hero-entry;
     animation-duration: 1.3s;
     padding: 1em;
+    box-shadow: 0px 1px 36px 0px #00000060;
 }
 
 .hero-content {
@@ -324,6 +325,16 @@ pre {
     background: rgb(128, 0, 0);
     border-radius: 8px;
     padding: 1em;
+}
+
+#close{
+    position: relative;
+    height:0;
+    display:flex;
+    left:91%;
+    font-size: 1em;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .fbt-dude {

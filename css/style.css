@@ -396,3 +396,13 @@ pre {
         width: 100%;
     }
 }
+
+.k2ex-warning{
+    background-color:rgb(185, 30, 10);
+    color:white!important;
+    padding:.1em;
+    text-align: center;
+}
+.k2ex-warning a{
+    color: white;
+}

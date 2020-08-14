@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Full-Body Tracking for Kinect | KinectToVR</title>
+        <meta property="og:title" content="KinectToVR: Full-Body Tracking"/>
+        <meta name="description" content="Get full-body tracking for free in VRChat and Beat Saber using Kinect for Xbox 360 or Xbox One. Setup takes less than 5 minutes!"/>
+        <meta property="og:description" content="Downloads for K2EX installer and calibration steps."/>
+        <meta property="og:image" content="https://k2vr.tech/img/k2vr-logo-new.png"/>
+        <meta name="theme-color" content="#5E149D"/>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kosugi&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="./css/style-k2ex.css"/>
+        <script>
+            // enforce https
+            // if (location.protocol !== 'https:') {
+            //     location.replace(`https:${location.href.substring(location.protocol.length)}`);
+            // }
+        </script>
+    </head>
+    <body class="stackedit">
+        <header>
+            <div>
+                <h1 class="title">
+                    <img class="logo" src="./img/k2vr-logo.svg" alt="KinectToVr Logo">
+                    KinectToVR EX<span style="font-size: .25em; vertical-align: 1.75em; font-weight: 400; margin-left: .3em; background: white; color: #64169F; padding: 0 .4em; border-radius: 4px;;">Beta</span>
+                </h1>
+            </div>
+            <p>Kinect Full-Body Tracking</p>
+        </header>
+        <!-- <div class="k2ex-warning"><p>Please update to KinectToVR EX if you play VRChat. <a href="https://discord.com/invite/YBQCRDG">More info on  Discord.</a></p>
+        <p style="font-size: .7em; margin-top:-.6em">(Using K2VR Installer will not install KinectToVR EX)</p></div> -->
+        <!-- <div class="idiot-warning-container">
+            <div class="fbt-dude"></div>
+            <div class="idiot-warning-body">
+                <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>Dismiss</span>
+                <h4 class="blink">
+                    THIS ONLY TRACKS YOUR <u>LEGS AND WAIST</u>
+                </h4>
+                <p>
+                    This software is only for adding leg tracking to existing <u>roomscale</u> VR headsets with tracked motion controllers.
+                    i.e. Oculus Rift, Quest with Link, Rift S, Vive, Index, Windows Mixed Reality, e.t.c.
+                </p>
+                <p>
+                    If you want to play Beat Saber with your hands and/or get headset tracking.<br>
+                    You'll need to use <a href="https://driver4vr.com">Driver4VR</a> instead.
+                </p>
+                
+            </div>
+        </div> -->
+        <div class="installer-hero">
+            <div class="hero-content">
+                <h1>K2EX Installer<span style="font-size: .4em; vertical-align: 1.1em; font-weight: 600; margin-left: -.1em;">v1.5.5</span></h1>
+                <p>
+                    Get started with KinectToVR in under 5 minutes!
+                    <br><strong>(Scroll down for instructions)</strong>
+                </p>
+                <div class="hero-buttons">
+                    <a id="download-button" href="https://cdn.discordapp.com/attachments/741268778674946049/742583346747670639/k2ex-installer-1.5.5.exe">Download</a>
+                    <a id="discord-link" href="https://discord.gg/YBQCRDG">Discord</a>
+                    <a id="github-link" href="https://github.com/KinectToVR">Github</a>
+                </div>
+            </div>
+            <img class="hero-image" src="./img/hero-image-new.png" alt="Installer screenshot">
+        </div>
+        <div class="stackedit__html">
+            <!-- <h1 id="main-header">What is KinectToVR?</h1>
+            <p>
+                KinectToVR is an opensource program created by sharkyh20 for adding leg tracking to VR using a Kinect sensor.
+                You can find the original source at
+                <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a>
+            </p>
+            <p>
+                Join the
+                <a id="discord" href="https://discord.gg/Mu28W4N">Discord</a>
+                if you have further questions.
+            </p> -->
+            <h1 id="calib-instructions">How to calibrate</h1>
+            <!-- <h3>Video Instructions (text version is below)</h3> -->
+            <div class="youtube-container">
+                <iframe src="https://www.youtube.com/embed/oBdvO550H90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h2 id="questions">FAQ</h2>
+            <p id="legs">
+                <strong>How do I track my head and hands?</strong>
+                <br />
+                You don't. This program was made for leg tracking only. if you want to cook up a DIY VR setup, you're gonna need to buy Driver4VR.
+            </p>
+            <p id="why-k2vr">
+                <strong>What makes KinectToVR so much better than Driver4VR?</strong>
+                <br />
+                Its free and it takes less CPU to run. it has 60FPS tracking, can despawn trackers in the middle of a game to get out of fullbody tracking and more.
+            </p>
+            <p id="multiple-kinects">
+                <strong>Can I use multiple Kinect sensors at once?</strong>
+                <br />
+                No, never. for many technical reasons, this isn't achievable while retaining our sanity. And anyway, you can achieve spinning around with a single Kinect. more on that in the near future.
+            </p>
+            <!-- <p id="head-hands">
+                <strong>Can I use KinectToVR to track my head/hands?</strong>
+                <br />
+                While there are buttons claiming to spawn trackers for other joints in
+                the K2VR UI. The software is in a state where that simply doesn’t work
+                and crashes the software. I recommend you once again look into getting
+                <a href="https://www.driver4vr.com/">Driver4VR</a>
+                as it can do this no problem.
+            </p> -->
+            <p id="sharky">
+                <strong>Where is Sharky?</strong>
+                <br />
+                Hooray Sharky has in fact, not succumbed to COVID-19. Refer to the
+                announcements channel on Discord.
+                <s>
+                    We don’t know where she is. I’d assume we would know if she died. But
+                    in her last update video and on Discord she mentioned going to
+                    university. I’ve personally seen people go off the grid for multiple
+                    YEARS when going to uni or college in the past. So, uhh, probably
+                    having a splitting headache in a dorm doing assignments and getting
+                    drunk with mates.
+                </s>
+            </p>
+            <!-- <p id="breaking-changes">
+                <strong>
+                    Since Sharky is gone and there hasn’t been any updates in almost
+                    a year. Is the software going to stop working?
+                </strong>
+                <br />
+                Most likely not. The only dependencies are the Kinect SDK, for which
+                development ended many years before K2VR even existed. And
+                OpenVR-Input-Emulator which is still used by a lot of other projects and
+                will continue to get fixes from the community as time goes on. If there
+                ever is a need for a fix for OVRIE, I will update this document.
+            </p>
+            <p id="psmove">
+                <strong>What about PSMove?</strong>
+                <br />
+                I’ll have more info on PSMove when I get my own setup completed. For
+                now, I would refer you to the folks on the D4VR Discord or the
+                color-tracking channels. But do expect a full tutorial from me.
+            </p>
+            <p id="nolife">
+                <strong>Why do you know so much?</strong>
+                <br />
+                I have no life.
+            </p> -->
+            <h2 id="extras">other bits</h2>
+            <p id="ovras">
+                What people call “Playspace Mover” is actually Space Drag from
+                <a href="https://store.steampowered.com/app/1009850">OpenVR Advanced Settings</a>.
+                <br />
+                An addon for SteamVR that contains incredibly useful stuff.
+            </p>
+            <div class="iframe-container">
+                <iframe src="https://store.steampowered.com/widget/1009850/" width="646" height="190"></iframe>
+            </div>
+            <p id="rejoin-tool">
+                If you're playing VRChat, and you want to launch into
+                fullbody while in-game but are in an invite-only instance. You can use
+                <a href="https://github.com/Yanorei32/VRChatRejoinTool">VRChat Rejoin Tool</a>
+                to launch the game back into the last world you were in as if you
+                launched it from the VRChat Web UI.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Kinect全身トラッキング | KinectToVR</title>
+        <meta property="og:title" content="KinectToVR: 全身トラッキング"/>
+        <meta name="description" content="VRChatや他のVRゲームでKinectを使って足をトラッキングしてみましょう。 セットアップは5分以内に完了します"/>
+        <meta property="og:description" content="校正手順とK2EX-Installerのダウンロード"/>
+        <meta property="og:image" content="https://k2vr.tech/img/k2vr-logo-new.png"/>
+        <meta name="theme-color" content="#5E149D"/>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kosugi&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="./css/style-k2ex.css"/>
+        <script>
+            // enforce https
+            // if (location.protocol !== 'https:') {
+            //     location.replace(`https:${location.href.substring(location.protocol.length)}`);
+            // }
+        </script>
+    </head>
+    <body class="stackedit">
+        <header>
+            <div>
+                <h1 class="title">
+                    <img class="logo" src="./img/k2vr-logo.svg" alt="KinectToVr Logo">
+                    KinectToVR EX<span style="font-size: .25em; vertical-align: 1.75em; font-weight: 400; margin-left: .3em; background: white; color: #64169F; padding: 0 .4em; border-radius: 4px;;">Beta</span>
+                </h1>
+            </div>
+            <p>Kinectフルボディトラッキング</p>
+            <p class="language"><a href="./k2ex.html">English website</a> このページは、DeepL、Google、Yandexの日本語と機械翻訳ツールについて、私の限られた知識をもとに書いたものです。<br>何か間違いがあったら、気軽にGitHubで課題を出してみてください。</p>
+        </header>
+        <!-- <div class="k2ex-warning"><p>Please update to KinectToVR EX if you play VRChat. <a href="https://discord.com/invite/YBQCRDG">More info on  Discord.</a></p>
+        <p style="font-size: .7em; margin-top:-.6em">(Using K2VR Installer will not install KinectToVR EX)</p></div> -->
+        <!-- <div class="idiot-warning-container">
+            <div class="fbt-dude"></div>
+            <div class="idiot-warning-body">
+                <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>Dismiss</span>
+                <h4 class="blink">
+                    THIS ONLY TRACKS YOUR <u>LEGS AND WAIST</u>
+                </h4>
+                <p>
+                    This software is only for adding leg tracking to existing <u>roomscale</u> VR headsets with tracked motion controllers.
+                    i.e. Oculus Rift, Quest with Link, Rift S, Vive, Index, Windows Mixed Reality, e.t.c.
+                </p>
+                <p>
+                    If you want to play Beat Saber with your hands and/or get headset tracking.<br>
+                    You'll need to use <a href="https://driver4vr.com">Driver4VR</a> instead.
+                </p>
+                
+            </div>
+        </div> -->
+        <div class="installer-hero">
+            <div class="hero-content">
+                <h1>K2EX Installer<span style="font-size: .4em; vertical-align: 1.1em; font-weight: 600; margin-left: -.1em;">v1.5.5</span></h1>
+                <p>
+                    5分以内にKinectToVRを使い始めよう!
+                    <br><strong>(校正のために下にスクロール)</strong>
+                </p>
+                <div class="hero-buttons">
+                    <a id="download-button" href="https://cdn.discordapp.com/attachments/741268778674946049/742583346747670639/k2ex-installer-1.5.5.exe">ダウンロード</a>
+                    <a id="discord-link" href="https://discord.gg/YBQCRDG">Discord</a>
+                    <a id="github-link" href="https://github.com/KinectToVR">Github</a>
+                </div>
+            </div>
+            <img class="hero-image" src="./img/hero-image-new.png" alt="Installer screenshot">
+        </div>
+        <div class="stackedit__html">
+            <!-- <h1 id="main-header">What is KinectToVR?</h1>
+            <p>
+                KinectToVR is an opensource program created by sharkyh20 for adding leg tracking to VR using a Kinect sensor.
+                You can find the original source at
+                <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a>
+            </p>
+            <p>
+                Join the
+                <a id="discord" href="https://discord.gg/Mu28W4N">Discord</a>
+                if you have further questions.
+            </p> -->
+            <h1 id="calib-instructions">校正チュートリアルビデオ（英語のみ</h1>
+            <!-- <h3>Video Instructions (text version is below)</h3> -->
+            <div class="youtube-container">
+                <iframe src="https://www.youtube.com/embed/oBdvO550H90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <p class="remark">日本語の動画もいつか予定しています。作ってくれたら喜んでここに展示したいと思います</p>
+            <p>その間に、マニュアルキャリブレーションのセットアップの基本的な手順をご紹介します。</p>
+            <p>
+            ● アプリを起動したら、2つ目の大きなボタンをクリックしてトラッカーをスポーンします。
+            <br>● Kinectから約3メートル離れたところに立っていることを確認してください。
+            <br>● Show/Hide Skeleton Tracking」をクリックすると、Kinectに見られていることを確認することができます。
+            <br>● Kinectが表示されない場合は、USBケーブルを再接続するか、パソコンを再起動してみてください。それでもダメな場合は、Discordでご連絡ください。
+            <br>● キャリブレーションを開始するには、「Calibrate」をクリックしてからSteamVRダッシュボードを閉じます。
+            <br>● コントローラーのジョイスティックを使って、トラッカーを自分のところまで移動させます。腰のトラッカーだけを並べるようにしてください。
+            <br>● コントローラ背面のトリガーを押して、最初のステップを確認します。
+            <br>● 右のジョイスティックを使用して、フットトラッカーを所定の位置に回転させます。
+            <br>● 動きが逆になっている場合は、左のジョイスティックで修正することができます。
+            <br>● もう一度トリガーを押して確認します。 動きが同期していれば、トラッカーの向きは重要ではありません。
+            <br>● 設定は自動的に保存されます。遊びに行く
+            </p>
+            <h2 id="questions">よくある質問</h2>
+            <p id="legs">
+                <strong>頭と手のトラッキングはどうすればいいの？</strong>
+                <br />
+                残念ながらKinectToVRでは無理です。 脚のトラッキングのためだけに作られたプログラムです。 疑似VRセットアップを作成するには、Driver4VRが必要になります。
+            </p>
+            <p id="why-k2vr">
+                <strong>KinectToVRはDriver4VRより何が優れているのか？</strong>
+                <br />
+                その自由、それは60FPSの補間された追跡を持っています、それは実行するためにより少ないシステムリソースを使用し、それはより低いレイテンシを持っています。 また、必要に応じてトラッカーをいつでもON/OFFできるようになっています。
+            </p>
+            <p id="multiple-kinects">
+                <strong>Kinectを2つ以上一緒に使うことはできますか？</strong>
+                <br />
+                非常識な量の作業なしに一度に複数のKinectのサポートを追加することは事実上不可能です。 すでに1つのセンサーで360度トラッキングに取り組んでいます。 今後の情報に期待しましょう。
+            </p>
+            <!-- <p id="head-hands">
+                <strong>Can I use KinectToVR to track my head/hands?</strong>
+                <br />
+                While there are buttons claiming to spawn trackers for other joints in
+                the K2VR UI. The software is in a state where that simply doesn’t work
+                and crashes the software. I recommend you once again look into getting
+                <a href="https://www.driver4vr.com/">Driver4VR</a>
+                as it can do this no problem.
+            </p> -->
+            <p id="sharky">
+                <strong>Sharkyh20はどこに行ったの？</strong>
+                <br />
+                元々の開発者であるSharkyh20は死んでいない。ご心配なく。 彼らは個人的な事柄で忙しい。
+            </p>
+            <!-- <p id="breaking-changes">
+                <strong>
+                    Since Sharky is gone and there hasn’t been any updates in almost
+                    a year. Is the software going to stop working?
+                </strong>
+                <br />
+                Most likely not. The only dependencies are the Kinect SDK, for which
+                development ended many years before K2VR even existed. And
+                OpenVR-Input-Emulator which is still used by a lot of other projects and
+                will continue to get fixes from the community as time goes on. If there
+                ever is a need for a fix for OVRIE, I will update this document.
+            </p>
+            <p id="psmove">
+                <strong>What about PSMove?</strong>
+                <br />
+                I’ll have more info on PSMove when I get my own setup completed. For
+                now, I would refer you to the folks on the D4VR Discord or the
+                color-tracking channels. But do expect a full tutorial from me.
+            </p>
+            <p id="nolife">
+                <strong>Why do you know so much?</strong>
+                <br />
+                I have no life.
+            </p> -->
+            <h2 id="extras">有用ソフト</h2>
+            <p id="ovras">
+                「Playspace Mover」と聞いたことがあるかもしれませんが、実は<a href="https://store.steampowered.com/app/1009850">OpenVR Advanced Settings</a>.の機能です。
+                <br />
+                は、多くの便利な機能を追加するSteamVRアドオンです。 全身トラッキングユーザーには必須とされています。
+            </p>
+            <div class="iframe-container">
+                <iframe src="https://store.steampowered.com/widget/1009850/" width="646" height="190"></iframe>
+            </div>
+            <p id="rejoin-tool">
+                オーナーだけがプレイヤーを招待できるVRChatの世界で、KinectToVRを有効にするためにゲームを再起動する必要がある場合は、yanorei32さんの<a href="https://github.com/Yanorei32/VRChatRejoinTool">VRChat Rejoin Tool</a>を使って同じインスタンスに再参加することができます。
+            </p>
+        </div>
+    </body>
+</html>

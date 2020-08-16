@@ -1,0 +1,66 @@
+disclaimer:
+"Before starting, Beat Saber custom avatars only work with the older version of KinectToVR for now. Blade and Sorcery plain doesn't work."
+"For future updates, questions or issues, join the Discord linked in the video description."
+
+intro:
+"Welcome to KinectToVR EX (or K2EX for short)! You're probably here because you want to use Kinect for full-body tracking"
+cut music "sure hope so, cause that's all it does."
+
+requirements:
+"to use it, you're going to need
+- a computer running Windows 10
+- SteamVR installed and working
+- a ROOMSCALE (that means you can move your head and hands around the room) VR headset i.e. Vive, Index, Rift, WMR and so on
+- an Xbox 360 or Xbox One Kinect
+- the appropriate adapter for your Kinect (can be had on Ebay or Amazon for relatively cheap)
+- about 3 meters (9 feet) of space in one direction of your room for tracking to work properly'
+
+getting k2ex:
+"Installing k2ex is easy, open a browser tab and go to k2vr.tech/k2ex and it should pop up with this"
+"Click here to download the installer, because we don't make money off this, buying a certificate is out of the question and your antivirus might false-flag it. you should probably turn it off for the duration of the install."
+"depending on your internet connection the installer may take a little while to run as it needs to download KinectToVR itself and the appropriate drivers for your Kinect (please don't install the drivers yourself unless you know what you're doing.)"
+"If the installer doesn't detect your Kinect, here are a few things you can check yourself:
+- Make sure your adapter is firmly plugged in at every connector.
+- Ensure the LED on the adapter is lit up to indicate it's recieving power.
+- If using a USB extension cord, try without it.
+- Restart your computer.
+- Change the USB port the Kinect is connected to."
+"If none of these work, join our Discord for help."
+
+kinect position:
+"Kinect has a low field of view, so it's recommended that you put it high up and pointing down at you about 3 to 4 meters away for the best tracking."
+
+launching and playspace setup:
+"great, KinectToVR is now installed! if everything went correctly, you can find it here in the start menu. if it isn't there, you can find it manually by going to C:\K2EX and using the shortcuts there. you can also copy them to your desktop for easy use"
+"before opening it, launch your VR software if needed, then SteamVR"
+"You want your VR playspace to face the Kinect, the option for this is called Room Setup for Vive and Index, Guardian for Rift, Rift S and Quest with Link, and Set up Room boundary for Windows Mixed Reality headsets. All of these setup utilities will make you pick a forward direction as well as drawing the space."
+"if you don't do this, the trackers will face sideways and break tracking"
+
+calibration:
+"now you can open k2ex, after enabling the skeleton view to make sure the Kinect can track you, go ahead and click on the big button that says HIT ME"
+"now we're at the fun part, calibration!"
+"before you ruin everything, dont use offsets as a remedy to bad calibration, dont touch anything in the head tracking and controllers tab, and the checkbox labelled experimental calibration doesnt calibrate properly. they dont work, and you will break everything, I AM SERIOUS"
+"While in VR, click calibrate and close the SteamVR dashboard by clicking outside of it."
+"calibration works in two steps, position then rotation."
+"use the joysticks or touchpads on your VR controllers to move ONLY the waist tracker into place then hit trigger and wait a few seconds while standing still to confirm"
+"use the right controller to rotate the foot trackers into place and hit trigger again to confirm. you can adjust the rotation with the left joystick, but only use it if your foot trackers are swapped around"
+"if one of the controllers doesnt work, restart the app while leaving steamvr open and begin calibration again."
+"that's it! you're done go have fun! if you need any help, again, join our Discord. You will not get help by asking in YouTube comments."
+
+"there are some extra optional cool things you might want to know about"
+
+autostart and tracking filters:
+"if you plan on using KinectToVR all the time, you can make it start and exit with SteamVR by going to SteamVR settings, Startup/Shutdown and then in choose startup overlay apps, enable KinectToVR."
+"On top of this, if you check inside the app, at the bottom there's an option to make trackers spawn automatically when the app opens. if enabled, the app will wait 5 seconds to spawn the trackers after launching, so you can quit it if you didn't want it running that time around."
+"you can also despawn and respawn trackers while leaving the app open at any time, this is nice in VRChat if you want to stop playing in fullbody, just like if you turned real trackers on and off"
+"in the Tracking Options tab, you can enable change the filter for the trackers, by default its very close to the raw 30fps output from the Kinect. but you can set it to linear interpolation, lowpass or kalman, which will give you smoother tracking at the expense of a bit of delay. my personal favorite is lowpass."
+
+outro:
+"there are some bugs to iron out, and not everyone's experience will be as great, but we hope you enjoy."
+*"say thanks to akaya"*
+
+list of shit I need to gather:
+screenshots of all the k2ex tabs DONE
+screenshots of steamvr with and without trackers and with despawned trackers DONE
+video of me calibrating
+screenshot of the top of k2vr.tech/k2ex and video of me typing it into a browser

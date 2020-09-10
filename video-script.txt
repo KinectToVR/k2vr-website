@@ -63,4 +63,6 @@ list of shit I need to gather:
 screenshots of all the k2ex tabs DONE
 screenshots of steamvr with and without trackers and with despawned trackers DONE
 video of me calibrating
-screenshot of the top of k2vr.tech/k2ex and video of me typing it into a browser
+screenshot of the top of k2vr.tech/k2ex and video of me typing it into a browser DONE
+better image of Kinect position DONE
+https://www.smeenk.com/webgl/kinectfovexplorer.html

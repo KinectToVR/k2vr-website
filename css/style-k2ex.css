@@ -10,14 +10,29 @@
     }
 }
 
+@keyframes modal-entry {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes highlight {
     25%, 50% {
-        background-color: rgba(61, 156, 52, 0.5);
+        background-color: rgba(157, 13, 182, 0.5);
     }
 
     from, to {
         background-color: transparent;
     }
+}
+
+@keyframes downloadButton {
+    0%{background-position:0% 20%}
+    50%{background-position:100% 81%}
+    100%{background-position:0% 20%}
 }
 
 html, body {
@@ -31,19 +46,22 @@ html, body {
 
 body {
     background-color: #161616;
-    background: url("../img/dots.png"), #3f0362;
+    background: url("../img/dots.png"), #150333;
     background-size: 12em;
-    color: #2f2f2f;
-    font-family: "Jost", "Kosugi", sans-serif;
+    color: #e2e2e2;
+    font-family: "Jost", "M PLUS Rounded 1c", sans-serif;
     font-size: x-large;
     text-rendering: geometricPrecision;
 }
 
 header {
-    background: linear-gradient(135deg, #470E95, #741AA4);
+    background: linear-gradient(135deg, #7826CD, #A6369B);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    /* background: linear-gradient(310deg, #0031ca, #d90098, #51009f);
+    background-size: 600% 600%;
+    animation: downloadButton 8s ease-in-out infinite; */
     width: 100%;
     display: block;
     z-index: 999;
@@ -51,8 +69,8 @@ header {
     box-sizing: border-box;
     color: #ffffff;
     /*font-size: 0.8em;*/
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: .3em;
 }
 
 header h1.title > .logo {
@@ -75,15 +93,20 @@ header p {
     margin-top: 0;
 }
 
-header .language{
+header .langbar{
     font-size: .8em;
     text-align: left;
     position: relative;
     bottom:.3em;
-    left:.3em;
-    display:inline
+    left:.6em;
+    display:flexbox;
+    background: #121212;
+    width: max-content;
+    padding: .2em;
+    border-radius: 6px;
+    margin-top: -.3em;
 }
-header .language a{color: white;}
+header .langbar a{color: white; margin: 0 .4em; text-decoration: none;}
 
 .installer-hero {
     z-index: -1;
@@ -91,48 +114,75 @@ header .language a{color: white;}
     display: flex;
     width: 80%;
     max-width: 65em;
-    background: linear-gradient(90deg, #f5f5f5, #c2c2c2);
+    /* background: linear-gradient(90deg, #1f1f1f, #0f0f0f); */
+    background: #121212;
     border-radius: 8px;
     animation-name: hero-entry;
     animation-duration: 1.3s;
-    padding: 1em;
+    /* padding: 1em; */
     box-shadow: 0px 1px 36px 0px #00000060;
 }
 
 .hero-content {
     display: inline-block;
-    width: auto;
+    min-width: max-content;
     margin: auto 1em;
+    padding: 1em;
     transform: translateY(-1em);
-    color:#272727;
+    color:#ffffff;
+    overflow: hidden!important;
+
 }
 
 .hero-content h1 {
     line-height: 1em;
 }
 
-.hero-image {
-    /* min-width: 0; */
-    object-fit: contain;
-    width:50%;
-    margin: 0 auto;
+.hero-video-container{
+    width: auto;
+    background-color: #121212;
+    display: block;
+    overflow: hidden;
 }
+
+.hero-video {
+    /* min-width: 0; */
+    /* display: block; */
+    background-color: #121212!important;
+    width:100%;
+    transform: scale(1.2);
+    height: 100%;
+    /* margin: 0 auto; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/* 
+.video-overlay{
+    width: 100%;
+    height: 20%;
+    background: url("../img/overlay.png");
+    background-size: cover;
+} */
 
 .hero-buttons > a {
     white-space: nowrap;
     display: inline-block;
-    margin: 1em 0;
+    margin: .4em 0;
     margin-right: 0.1em;
     text-align: center;
 }
 
 #download-button {
-    transition: 0.1s;
-    background: linear-gradient(135deg, #470E95, #741AA4);
+    transition: .1s ease-in;
+    background: linear-gradient(310deg, #0031ca, #d90098, #51009f);
+    background-size: 600% 600%;
+    animation: downloadButton 8s ease-in-out infinite;
     color: #ffffff;
-    padding: 15px 20px;
+    padding: 20px 20px;
     text-decoration: none;
     border-radius: 4px;
+    max-height: 35px;
 }
 
 #download-button:before {
@@ -147,15 +197,15 @@ header .language a{color: white;}
 }
 
 #download-button:hover {
-    transition: all 2s ease;
-    background: linear-gradient(135deg, #28005f, #941dd4);
+    transition: all .1s ease-out;
+    filter: brightness(1.5);
 }
 
 #github-link {
     transition: 0.1s;
     background: #404040;
     color: #ffffff;
-    padding: 15px 20px;
+    padding: 20px 20px;
     text-decoration: none;
     border-radius: 4px;
 }
@@ -190,7 +240,7 @@ header .language a{color: white;}
     transition: 0.1s;
     background: #5b72c5;
     color: #ffffff;
-    padding: 15px 20px;
+    padding: 20px 20px;
     text-decoration: none;
     border-radius: 4px;
 }
@@ -238,7 +288,7 @@ pre {
     border: none;
 }
 
-:target {
+:target:not(#modal) {
     animation-name: highlight;
     animation-duration: 3s;
 }
@@ -249,20 +299,21 @@ pre {
 
 .stackedit__html .remark {
     margin: 0;
-    font-size: 1em;
+    font-size: .8em;
     color: white;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    display:block;
     font-weight: 500;
     background: rgb(238, 81, 81);
     border-radius: 5px;
-    padding: 0.5em 1em;
-    width: 100%;
+    padding: 0.4em .8em;
+    width: max-content;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
 }
 
 .stackedit__html a {
-    color: rgb(77, 15, 148);
+    color: rgb(105, 11, 212);
     transition: 0.1s;
 }
 
@@ -276,7 +327,7 @@ pre {
     margin: 3em auto;
     width: 90%;
     max-width: 50em;
-    background-color: #DFDFDF;
+    background-color: #1a1a1a;
     border-radius: 11px;
     padding: 1em;
     box-shadow: 0px 1px 36px 0px #00000060;
@@ -292,13 +343,13 @@ pre {
 }
 
 .stackedit__html h1, h2 {
-    color: #501098;
+    color: #5f07c3;
     
 }
 
 .stackedit__html strong {
-    font-weight: 900;
-    color: #353535;
+    font-weight: 700;
+    color: #ebebeb;
 }
 
 .blink {
@@ -330,7 +381,7 @@ pre {
         animation: none !important;
     }
 
-    :target {
+    :target:not(#modal) {
         animation: none !important;
         background-color: rgba(255, 255, 255, 0.1) !important;
     }
@@ -427,4 +478,79 @@ pre {
 }
 .k2ex-warning a{
     color: white;
+}
+
+.modal-container{
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000000ad;
+    position: absolute;
+    flex-direction: column;
+    visibility: hidden;
+    animation-duration: .5s;
+    animation-play-state: paused;
+    animation-name: modal-entry;
+}
+
+.download-modal{
+    max-width:1000px;
+    height:max-content;
+    text-align: center;
+    color: white;
+    background-color: #111111;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 62px 0px rgba(0,0,0,0.75);
+}
+.download-modal h1{
+    line-height: 0em;
+}
+
+.download-modal iframe{
+    width: 528px;
+    height: 297px;
+}
+.download-modal h3{
+    font-weight: 400;
+    line-height: 1em;
+}
+.modal-dl-link{
+    color: #aaaaff;
+    margin: 1em;
+}
+.modal-discord{
+    background: #5b72c5;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.modal-discord:before{
+    /* visibility: visible; */
+    content: "aaa";
+    background-image: url(../img/Discord-Logo-White.svg);
+    display: inline-block;
+    background-size: 80%;
+    background-position: center left;
+    color: transparent;
+    background-repeat: no-repeat;
+}
+.system-requirements{
+    font-size: .7em;
+    margin-top: -.4em;
+}
+.system-requirements p{
+    margin:-.1em;
+}
+.transparent{
+    opacity: .7;
 }

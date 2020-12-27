@@ -9,56 +9,24 @@
         <meta property="og:description" content="Downloads for K2EX installer and calibration steps."/>
         <meta property="og:image" content="https://k2vr.tech/img/k2ex-opengraph.png"/>
         <meta name="theme-color" content="#5E149D"/>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&family=M+PLUS+Rounded+1c:wght@600&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kosugi&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="./css/style-k2ex.css"/>
         <script>
-            var isDownloaded = false
-            var downloadUrl = "https://github.com/KinectToVR/k2vr-installer-gui/releases/download/2.1.2/k2ex-installer-2.1.2.exe";
-            function showModal()
-            {
-                document.getElementById('modal').style.animationPlayState='running'
-                document.getElementById('modal').style.visibility='visible'
-                document.body.style.overflow='hidden'
-                if (isDownloaded == false)
-                {
-                    document.getElementById('oh_my_god_javascript_is_actually_the_worst').src = downloadUrl;
-                    isDownloaded = true;
-                }
-            }
-            function hideModal()
-            {
-                document.getElementById('modal').style.visibility='hidden'
-                document.body.style.overflow='visible'
-            }
+            // enforce https
+            // if (location.protocol !== 'https:') {
+            //     location.replace(`https:${location.href.substring(location.protocol.length)}`);
+            // }
         </script>
     </head>
     <body class="stackedit">
-        <iframe id="oh_my_god_javascript_is_actually_the_worst" style="display:none;"></iframe>
-        <div id="modal" class="modal-container">
-            <div class="download-modal">
-                <h1>Thank you for downloading K2EX!</h1>
-                <h3>Your download has started. we recommend watching this quick setup guide.<br>(about one minute long)</h3>
-                <iframe src="https://streamable.com/e/6p3jf1?loop=0" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:330px;position:relative;left:0px;top:0px;overflow:hidden;"></iframe>
-                <br>
-                <a class="modal-dl-link" href="https://github.com/KinectToVR/k2vr-installer-gui/releases/download/2.1.2/k2ex-installer-2.1.2.exe">Click here if the download doesn't start.</a>
-                <br>
-                <a class="modal-discord" href="https://discord.gg/YBQCRDG">Join our Discord server for help</a>
-            </div>
-            <p style='color:white; background: #111111; padding: .4em .8em; border-radius: 8px; cursor: pointer;' onclick='hideModal();'>Click here to close this window.</p>
-        </div>
         <header>
             <div>
                 <h1 class="title">
                     <img class="logo" src="./img/k2vr-logo.svg" alt="KinectToVr Logo">
-                    KinectToVR<span style="font-size: .25em; vertical-align: 1.75em; font-weight: 400; margin-left: .3em; background: white; color: #64169F; padding: 0 .4em; border-radius: 4px;;">Beta</span>
+                    KinectToVR EX<span style="font-size: .25em; vertical-align: 1.75em; font-weight: 400; margin-left: .3em; background: white; color: #64169F; padding: 0 .4em; border-radius: 4px;;">Beta</span>
                 </h1>
             </div>
             <p>Kinect Full-Body Tracking</p>
-            <div class="langbar">
-                <a href="index-jp.html">🇯🇵 日本語</a>
-                <a style="color: #7E28C6;" href="index.html">🇺🇸 English</a>
-                <a href="index-fr.html">🇫🇷 Français</a>
-            </div>
         </header>
         <!-- <div class="k2ex-warning"><p>The old <strong>not EX</strong> version of KinectToVR is broken with SteamVR 1.14 <a href="https://discord.com/invite/YBQCRDG">Join Discord if you need help updating</a></p>
         <p style="font-size: .7em; margin-top:-.6em">Please update ASAP and please TELL YOUR FRIENDS</p></div> -->
@@ -80,53 +48,27 @@
                 
             </div>
         </div> -->
-        <div class="installer-hero">
+        <!-- <div class="installer-hero">
             <div class="hero-content">
-                <h1>K2EX Installer</h1>
+                <h1>K2EX Installer<span style="font-size: .4em; vertical-align: 1.1em; font-weight: 600; margin-left: -.1em;">v1.5.6</span></h1>
                 <p>
                     Get started with KinectToVR EX in under 5 minutes!
                     <br><strong>(Scroll down for instructions)</strong>
                 </p>
                 <div class="hero-buttons">
-                    <a id="download-button" onclick="showModal();" href="#modal">Get K2EX Now</a>
+                    <a id="download-button" href="https://cdn.discordapp.com/attachments/741268778674946049/744351162643251240/k2ex-installer-1.5.6.exe">Download</a>
                     <a id="discord-link" href="https://discord.gg/YBQCRDG">Discord</a>
                     <a id="github-link" href="https://github.com/KinectToVR">Github</a>
                 </div>
-                <div class="system-requirements">
-                    <p>Installer 2.1.2 • K2EX 0.8.0</p>
-                    <p class="transparent">Hash: 01CE0F42FC2A15403CE9E523C514A4EC</p>
-                    <hr>
-                    <p>System Requirements:</p>
-                    <p class="transparent">Windows 10 1809 or later</p>
-                    <p class="transparent">Roomscale PCVR headset compatible with SteamVR</p>
-                    <p class="transparent">Kinect for Xbox 360, Kinect for Xbox One or PlayStation Move + Eye</p>
-                    <p class="transparent">Appropriate Kinect USB adapter</p>
-                    <p class="transparent">Compatible USB 3.0 controller with available bandwidth for Xbox One Kinect</p>
-                    <a href="#about-sys-req" style="color: #aaaaff;">More info about system requirements</a>
-                </div>
             </div>
-            <div class="hero-video-container">
-                <div class="video-overlay"></div>
-                <video autoplay="true" controls="false" class="hero-video" src="https://raytracing-benchmarks.are-really.cool/5hPk9cS.mp4"></video>
-            </div>
-        </div>
+            <img class="hero-image" src="./img/hero-image-new.png" alt="Installer screenshot">
+        </div> -->
         <div class="stackedit__html">
-            <!-- <h1 id="main-header">What is KinectToVR?</h1>
-            <p>
-                KinectToVR is an opensource program created by sharkyh20 for adding leg tracking to VR using a Kinect sensor.
-                You can find the original source at
-                <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a>
-            </p>
-            <p>
-                Join the
-                <a id="discord" href="https://discord.gg/Mu28W4N">Discord</a>
-                if you have further questions.
-            </p> -->
-            <!-- <h1 id="calib-instructions">How to calibrate</h1> -->
-            <!-- <h3>Video Instructions (text version is below)</h3> -->
-            <!-- <div class="youtube-container">
+            <h1 style="text-align:Center" id="main-header">Thank you for downloading KinectToVR!</h1>
+            <h3 id="video">Following is a short instructional video on calibration.</h3>
+            <div class="youtube-container">
                 <iframe src="https://www.youtube.com/embed/9W_LCG7dPy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div> -->
+            </div>
             <h2 id="calibration">How to calibrate:</h2>
             <h3 id="auto-calibration">Automatic Calibration:</h3>
             <ul>
@@ -149,29 +91,28 @@
                 <li>Click on <strong>Begin Calibration</strong></li>
                 <p class="remark">Try not to move around too much while calibrating.</p>
                 <li>Close out of the SteamVR dashboard by clicking outside of it.</li>
-                <li>Use the trackpads/thumbsticks on your VR controllers to move the trackers around. <strong>Align only the hip tracker to your waist.</strong></li>
-                <li>Press the grip on your right controller to switch between position and rotation calibration. Do this as many times as you need until you've gotten calibration to a good point.</li>
-                <li>Use the right controller's trackpad/thumbstick to rotate the trackers until they are parallel to your body.</li>
-                <p class="remark">You can hold the left controller's grip to make more fine-tuned adjustments.</p>
+                <li>Use the touchpads/joysticks on your VR controllers to move the trackers around. <strong>Align only the hip tracker to your waist.</strong></li>
+                <li>Press the trigger on one of your VR controllers to confirm the first step of calibration then wait 3 seconds while standing still.</li>
+                <li>Use the right controller's touchpad/joystick to rotate the trackers until the foot trackers are parallel to your body.</li>
                 <li><strong>If trackers aren't following you; E.g. walking forward makes the trackers walk to the left.</strong> Use the left controller's touchpad/joystick to rotate the trackers until they line up to your movements. Try taking a few steps to make sure.</li>
-                <li>Press triggers on both of VR controllers to confirm and save calibration.</li>
+                <li>Press the trigger on one of your VR controllers to confirm the second step of calibration.</li>
                 <li>You're done!</li>
             </ul>
             <h2 id="questions">FAQ</h2>
             <p id="legs">
                 <strong>How do I track my head and hands?</strong>
                 <br />
-                You can't. This program was made for leg and hip tracking only. if you want to cook up a DIY VR setup, you're gonna need to buy Driver4VR.
+                You don't. This program was made for leg tracking only. if you want to cook up a DIY VR setup, you're gonna need to buy Driver4VR.
             </p>
             <p id="why-k2vr">
                 <strong>What makes KinectToVR so much better than Driver4VR?</strong>
                 <br />
-                It's free and it takes less CPU to run. it has "60FPS" tracking, can despawn trackers in the middle of a game to get out of fullbody tracking, and most of all you can turn around without your body becoming mashed potatoes.
+                Its free and it takes less CPU to run. it has 60FPS tracking, can despawn trackers in the middle of a game to get out of fullbody tracking and more.
             </p>
             <p id="multiple-kinects">
                 <strong>Can I use multiple Kinect sensors at once?</strong>
                 <br />
-                No, never. for many technical reasons, this isn't achievable while retaining our sanity. And anyway, you can achieve spinning around with a single Kinect.
+                No, never. for many technical reasons, this isn't achievable while retaining our sanity. And anyway, you can achieve spinning around with a single Kinect. more on that in the near future.
             </p>
             <!-- <p id="head-hands">
                 <strong>Can I use KinectToVR to track my head/hands?</strong>
@@ -195,22 +136,6 @@
                     having a splitting headache in a dorm doing assignments and getting
                     drunk with mates.
                 </s>
-            </p>
-            <p id="about-sys-req">
-                <strong>About system requirements</strong>
-                <br>
-                KinectToVR itself can be launched on Windows 8.1/7 if you try hard enough. But the installer is built for Windows 10 only. Considering Windows 7 is unsupported and 8.1 is nearing EOL, we are not going to be developing for these versions. As for Linux support, K2EX depends on the Microsoft Kinect SDK and it's native Windows drivers, unless some insane soul were to rewrite KinectToVR to use opensource alternatives including the skeleton tracking, it's most likely never going to run on Linux, not even emulated.
-                <br><br>
-                Just about every headset has been tested with K2EX, Vive, Vive Cosmos, Quest, Quest 2, ALVR, Oculus Link, Virtual Desktop. They all work, as well as Valve Index and Windows Mixed Reality headsets. The K2EX driver doesn't care what your actual headset is, it just makes trackers.
-                <br><br>
-                Nearly everyone will be using Kinect for Xbox. But that doesn't stop Kinect for Windows V1 and V2 from working. You'll just need to tell the installer to install for the corresponding model of Kinect for Xbox.
-                Kinect Azure DK is based on a very different system and SDK and as such is incompatible with K2EX. You can use <a href="https://github.com/conatsera/k4a_openvr">Aria's k4a_openvr</a> to use it for FBT. It does use quite a bit of your GPU though!
-                <br><br>
-                Kinect for Xbox doesn't actually end in a normal USB connector despite actually being based on USB. The connector provides 12 volts of power and USB. The adapter turns this into a wall wart and a USB connector. You can find them realtively cheaply on eBay or Amazon by searching for "kinect 360 adapter" or "kinect one adapter". Kinect for Windows doesn’t need an adapter as it ends in USB already.
-                <br><br>
-                Xbox One Kinect is very demanding when it comes to USB bandwidth, and it's also very picky about controllers. You can use <a href="https://k2vr.tech/UsbTreeView.exe">USBTreeView</a> to see what USB controllers you have on your PC and what's connected to them. If you seem to be having connectivity issues or are unsure, feel free to ask us on Discord.
-                <br><br>
-                This is important, if you have a Vive, Vive Pro or Valve Index, you should stay away from the Xbox One Kinect because it interferes with lighthouses, making your headset and controllers stop tracking. Xbox 360 Kinect has nearly the same tracking quality and won't cause these issues.
             </p>
             <!-- <p id="breaking-changes">
                 <strong>

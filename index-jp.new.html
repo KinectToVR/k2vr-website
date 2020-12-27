@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
@@ -9,7 +9,7 @@
         <meta property="og:description" content="Downloads for K2EX installer and calibration steps."/>
         <meta property="og:image" content="https://k2vr.tech/img/k2ex-opengraph.png"/>
         <meta name="theme-color" content="#5E149D"/>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&family=M+PLUS+Rounded+1c:wght@600&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="./css/style-k2ex.css"/>
         <script>
             var isDownloaded = false
@@ -36,15 +36,15 @@
         <iframe id="oh_my_god_javascript_is_actually_the_worst" style="display:none;"></iframe>
         <div id="modal" class="modal-container">
             <div class="download-modal">
-                <h1>Thank you for downloading K2EX!</h1>
-                <h3>Your download has started. we recommend watching this quick setup guide.<br>(about one minute long)</h3>
+                <h1>K2EXをダウンロードしてくれてありがとう</h1>
+                <h3>クイックキャリブレーションのビデオガイドです。<br>(ビデオは英語ですが、まだ簡単です。このページを下にスクロールすると、道順が書かれています。)</h3>
                 <iframe src="https://streamable.com/e/6p3jf1?loop=0" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:330px;position:relative;left:0px;top:0px;overflow:hidden;"></iframe>
                 <br>
-                <a class="modal-dl-link" href="https://github.com/KinectToVR/k2vr-installer-gui/releases/download/2.1.2/k2ex-installer-2.1.2.exe">Click here if the download doesn't start.</a>
+                <a class="modal-dl-link" href="https://github.com/KinectToVR/k2vr-installer-gui/releases/download/2.1.2/k2ex-installer-2.1.2.exe">ダウンロードが開始されなかった場合は、こちらをクリックしてください。</a>
                 <br>
-                <a class="modal-discord" href="https://discord.gg/YBQCRDG">Join our Discord server for help</a>
+                <a class="modal-discord" href="https://discord.gg/YBQCRDG">支援のために私たちのDiscordに参加することができます</a>
             </div>
-            <p style='color:white; background: #111111; padding: .4em .8em; border-radius: 8px; cursor: pointer;' onclick='hideModal();'>Click here to close this window.</p>
+            <p style='color:white; background: #111111; padding: .4em .8em; border-radius: 8px; cursor: pointer;' onclick='hideModal();'>を閉じる</p>
         </div>
         <header>
             <div>
@@ -53,10 +53,10 @@
                     KinectToVR<span style="font-size: .25em; vertical-align: 1.75em; font-weight: 400; margin-left: .3em; background: white; color: #64169F; padding: 0 .4em; border-radius: 4px;;">Beta</span>
                 </h1>
             </div>
-            <p>Kinect Full-Body Tracking</p>
+            <p>Kinectフルボディトラッキング</p>
             <div class="langbar">
-                <a href="index-jp.html">🇯🇵 日本語</a>
-                <a style="color: #7E28C6;" href="index.html">🇺🇸 English</a>
+                <a style="color: #7E28C6;" href="index-jp.html">🇯🇵 日本語</a>
+                <a href="index.html">🇺🇸 English</a>
                 <a href="index-fr.html">🇫🇷 Français</a>
             </div>
         </header>
@@ -84,25 +84,25 @@
             <div class="hero-content">
                 <h1>K2EX Installer</h1>
                 <p>
-                    Get started with KinectToVR EX in under 5 minutes!
-                    <br><strong>(Scroll down for instructions)</strong>
+                    5分以内にKinectToVRを使い始めよう!
+                    <br><strong>(校正のために下にスクロール)</strong>
                 </p>
                 <div class="hero-buttons">
-                    <a id="download-button" onclick="showModal();" href="#modal">Get K2EX Now</a>
+                    <a id="download-button" onclick="showModal();" href="#modal">ダウンロード</a>
                     <a id="discord-link" href="https://discord.gg/YBQCRDG">Discord</a>
                     <a id="github-link" href="https://github.com/KinectToVR">Github</a>
                 </div>
                 <div class="system-requirements">
                     <p>Installer 2.1.2 • K2EX 0.8.0</p>
-                    <p class="transparent">Hash: 01CE0F42FC2A15403CE9E523C514A4EC</p>
+                    <p class="transparent">ハッシュ: 01CE0F42FC2A15403CE9E523C514A4EC</p>
                     <hr>
-                    <p>System Requirements:</p>
-                    <p class="transparent">Windows 10 1809 or later</p>
-                    <p class="transparent">Roomscale PCVR headset compatible with SteamVR</p>
-                    <p class="transparent">Kinect for Xbox 360, Kinect for Xbox One or PlayStation Move + Eye</p>
-                    <p class="transparent">Appropriate Kinect USB adapter</p>
-                    <p class="transparent">Compatible USB 3.0 controller with available bandwidth for Xbox One Kinect</p>
-                    <a href="#about-sys-req" style="color: #aaaaff;">More info about system requirements</a>
+                    <p>システム要件:</p>
+                    <p class="transparent">Windows 10 1809 以上</p>
+                    <p class="transparent">SteamVRと互換性のあるルームスケールVRヘッドセット</p>
+                    <p class="transparent">Xbox 360 Kinect, Xbox One Kinect また PlayStation Move + Eye</p>
+                    <p class="transparent">適切なKinect電源アダプタ。</p>
+                    <p class="transparent">Xbox One kinectにUSB 3.0チップセットが利用可能に</p>
+                    <a href="#about-sys-req" style="color: #aaaaff;">システム要件の詳細を読む</a>
                 </div>
             </div>
             <div class="hero-video-container">
@@ -127,27 +127,29 @@
             <!-- <div class="youtube-container">
                 <iframe src="https://www.youtube.com/embed/9W_LCG7dPy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> -->
-            <h2 id="calibration">How to calibrate:</h2>
-            <h3 id="auto-calibration">Automatic Calibration:</h3>
+            <h2 id="calibration">キャリブレーションの指示：</h2>
+            <h3 id="auto-calibration">オートマチックキャリブレーション：</h3>
             <ul>
-                <li>Spawn trackers by clicking on <strong>Spawn Trackers</strong></li>
-                <li>Click <strong>Show/Hide Skeleton Tracking</strong> and ensure the Kinect can track you.</li>
-                <p class="remark">You must stand around 3 meters (9 feet) away from the sensor for tracking to work properly!</p>
-                <li>Turn off the tracking preview once you've ensure it's working.</li>
-                <li>Click the checkbox labelled <strong>Enable Automatic Calibration</strong></li>
-                <li>Click on <strong>Begin Calibration</strong> then stand still while looking in the direction of the Kinect.</li>
-                <li>4 countdowns of 3 seconds each will appear on the calibration button. after each countdown move to a slightly different spot in your room.</li>
-                <li>On the last countdown, just make sure to look straight forward in the direction of the Kinect.</li>
-                <li>You're done!</li>
+                <li><strong>「Spawn Trackers」</strong>をクリック。トラッカーが近くに表示されるはずです。</li>
+                <li><strong>「Show/Hide Skeleton Tracking」</strong>をクリック。Kinectで体が見えることを確認します。</li>
+                <p class="remark">3メートル離れた場所に立つ必要があります。そうでなければスケルトン追跡は機能しません。</p>
+                <li>プレビューをオフにすることができます。</li>
+                <li><strong>「Begin Calibration」</strong>をクリック。画面の指示に従ってください。英語だけなのは知っています。</li>
+                <li>3秒間、所定の位置に立ちます。</li>
+                <li>別の場所に移動します。</li>
+                <li>これを2回繰り返します。</li>
+                <li>最後にKinectの方を3秒間見ます。</li>
+                <li>終わった！</li>
             </ul>
-            <h3 id="manual-calibration">Manual Calibration:</h3>
+            <h3 id="manual-calibration">マニュアルキャリブレーション：</h3>
             <ul>
-                <li>Spawn trackers by clicking on <strong>Spawn Trackers</strong></li>
-                <li>Click <strong>Show/Hide Skeleton Tracking</strong> and ensure the Kinect can track you.</li>
-                <p class="remark">You must stand around 3 meters (9 feet) away from the sensor for tracking to work properly!</p>
-                <li>Turn off the tracking preview once you've ensure it's working.</li>
-                <li>Click on <strong>Begin Calibration</strong></li>
-                <p class="remark">Try not to move around too much while calibrating.</p>
+                <li><strong>「Spawn Trackers」</strong>をクリック。トラッカーが近くに表示されるはずです。</li>
+                <li><strong>「Show/Hide Skeleton Tracking」</strong>をクリック。Kinectで体が見えることを確認します。</li>
+                <p class="remark">3メートル離れた場所に立つ必要があります。そうでなければスケルトン追跡は機能しません。</p>
+                <li>プレビューをオフにすることができます。</li>
+                <li><strong>「Enable Manual Calibration」</strong>と書かれたボックスにチェックを入れます。</li>
+                <li><strong>「Begin Calibration」</strong>をクリック。画面の指示に従ってください。英語だけなのは知っています。</li>
+                <p class="remark">全体のプロセスのために、その場に立ってください。</p>
                 <li>Close out of the SteamVR dashboard by clicking outside of it.</li>
                 <li>Use the trackpads/thumbsticks on your VR controllers to move the trackers around. <strong>Align only the hip tracker to your waist.</strong></li>
                 <li>Press the grip on your right controller to switch between position and rotation calibration. Do this as many times as you need until you've gotten calibration to a good point.</li>

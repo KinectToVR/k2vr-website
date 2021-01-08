@@ -145,6 +145,10 @@ header .langbar a{color: white; margin: 0 .4em; text-decoration: none;}
     object-fit: cover;
 }
 
+.hero-buttons {
+    overflow-x: auto;
+}
+
 .hero-buttons > a {
     white-space: nowrap;
     display: inline-block;

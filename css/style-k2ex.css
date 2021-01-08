@@ -307,7 +307,7 @@ pre {
     background: rgb(238, 81, 81);
     border-radius: 5px;
     padding: 0.4em .8em;
-    width: max-content;
+    max-width: max-content;
     box-sizing: border-box;
     text-align: left;
 }
@@ -324,8 +324,8 @@ pre {
 /* trip */
 
 .stackedit__html {
+    box-sizing: border-box;
     margin: 3em auto;
-    width: 90%;
     max-width: 50em;
     background-color: #1a1a1a;
     border-radius: 11px;
@@ -458,15 +458,13 @@ pre {
     }
 }
 
-@media only screen and (max-width: 700px) {
-    .idiot-warning-container, .installer-hero {
-        flex-wrap: wrap;
+@media only screen and (max-width: 1200px) {
+    .hero-content {
+        min-width: auto;
     }
 
-    .hero-image {
-        /* Removed the amount of space added above and below
-           by object-fit to fit it in a square */
-        width: 100%;
+    .idiot-warning-container, .installer-hero {
+        flex-wrap: wrap;
     }
 }
 

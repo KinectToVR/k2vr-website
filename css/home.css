@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    /* background-image: url("./../../img/kinect360-cover.png"); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    color: #fff;
+    background-color: #000;
+}
+
+.display-3{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-stretch: condensed;
+    line-height: 105%;
+    text-shadow: 0px 0px 16px #000000;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+    -webkit-text-fill-color: white; */
+}
+
+.nav{
+    background: transparent;
+}
+
+.hero{
+    height: auto;
+}

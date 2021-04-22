@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>KinectToVR: Documentation | How to calibrate</title>
+        <meta property="og:title" content="KinectToVR: Full-Body Tracking"/>
+        <meta name="description" content="Documentation | How to calibrate"/>
+        <meta property="og:description" content="Documentation | How to calibrate"/>
+        <meta property="og:image" content="https://k2vr.tech/img/opengraph.png"/>
+        <meta name="theme-color" content="#5E149D"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&family=M+PLUS+Rounded+1c:wght@600&display=swap&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="icon" type="image/ico" href="../img/favicon.ico">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    </head>
+    <body>
+        <ul class="nav justify-content-end">
+            <div class="logo">
+                <p class="logotype d-none d-md-block">KinectToVR</p>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://github.com/KinectToVR">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://discord.gg/YBQCRDG">Discord</a>
+            </li>
+        </ul>
+        <br>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="#">Home</a>
+                    <span class="breadcrumb-item active">How to calibrate</span>
+                </nav>
+                <div class="alert alert-primary" role="alert" style="font-size: larger; line-height: 1.5em;">
+                    <strong data-toggle="tooltip" data-placement="top" title="Just like this one :)">Text in bold often has more info attached when you move your mouse over it!</strong>
+                    <br>
+                    <a href="https://discord.gg/YBQCRDG" class="alert-link">Join us on Discord</a> <strong>if you have any questions!</strong>
+                </div>
+                <h1>How to calibrate</h1>
+                <h2 id="auto">Automatic Calibration</h2>
+                <p>This is the default calibration method and it's recommended for most people, since under good conditions it will produce a more accurate result than manual.</p>
+                <ul>
+                    <li>After opening SteamVR, <strong data-toggle="tooltip" data-placement="top" title="K2EX Installer disables SteamVR Home because you can't see trackers in it. You can re-enable it afterwards. Though most of it's features are accessible through the SteamVR dashboard.">You should be in the empty SteamVR void.</strong> Open the SteamVR dashboard if it's not already open.</li>
+                    <li>Click on <strong data-toggle="tooltip" data-placement="top" title="It's in the bottom-left.">Desktop</strong> and open the <img src="../img/windows.svg" alt="Windows logo" style="vertical-align: -4%;"> Start menu. Then look for KinectToVR. It will be in a folder named K2EX.</li>
+                    <div class="alert alert-info" role="alert">
+                        <strong>You can make KinectToVR</strong> <a href="./autostart.html" class="alert-link">start with SteamVR automatically</a>
+                    </div>
+                    <li>When KinectToVR is opened, ensure that everything is working. <strong data-toggle="tooltip" data-placement="top" title="Reports errors from the Kinect SDK. (Xbox 360 only, Xbox One SDK doesn't have error messages.)">Kinect Status</strong>, <strong data-toggle="tooltip" data-placement="top" title="This is the status of the SteamVR (OpenVR) driver. Not Kinect or PSMove.">Driver Status</strong> and <strong>SteamVR Status</strong> should all say success.</li>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>If Kinect Status doesn't say Success!</strong> <a href="./kinectv1-troubleshooting.html" class="alert-link">click here for Xbox 360 Kinect</a> and <a href="./kinectv2-troubleshooting.html" class="alert-link">here for Xbox One Kinect</a>.
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>If Driver Status doesn't say Success!</strong> <a href="./minus10.html" class="alert-link">Click here to fix it.</a>
+                    </div>
+                    <li>Click <strong data-toggle="tooltip" data-placement="top" title="It could cause extra lag when playing a game so you should disable it after.">Show/Hide Skeleton Tracking</strong> to ensure the Kinect can see you properly.</li>
+                    <div class="alert alert-info" role="alert">
+                        <strong>You should be standing about 3 meters away from the Kinect for tracking to work. If you don't, the trackers will pile into each other in VR.</strong><br><a href="./no-tracking.html" class="alert-link">What if my Kinect isn't tracking?</a>
+                    </div>
+                    <li>You can now click on <strong data-toggle="tooltip" data-placement="top" title="Don't click it multiple times, it may take a few seconds to start.">Begin Calibration</strong> and get ready to stand in the first position.</li>
+                </ul>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="../img/calibration-position.svg" alt="">
+                    </div>
+                    <div class="col-10">
+                        <ul>
+                            <li>You need to move in <strong data-toggle="tooltip" data-placement="top" title="There's an option in the app to change the number, DON'T TOUCH IT">3 different spots</strong>.</li>
+                            <li>There's a countdown for each position before the data capture. You should be standing still when it hits 0.</li>
+                            <li>After all 3 position captures are done. You should look in the direction of the playspace where your Kinect is. <br><strong>This means if your Kinect is off-center, you should look to the side where your Kinect is, not directly at the Kinect.</strong></li>
+                            <div class="alert alert-info" role="alert">
+                                <strong>Your VR playspace orientation should point towards the side where the Kinect is. There's an arrow on the floor in SteamVR that shows it.</strong><br><a href="./reset-playspace.html" class="alert-link">How to change my playspace orientation.</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <ul>
+                    <li>That's it! You're all done! There's <a href="./improve-tracking">many ways to improve your tracking.</a> if you want. Now go play.</li>
+                    <div class="alert alert-warning" role="alert" style="margin-top: .3em;">
+                        <strong>It's possible that automatic calibration can fail. If it did, you can either</strong> <a href="./fix-autocalibration.html" class="alert-link">attempt to fix it</a> <strong>or follow through manual calibration as explained below</strong>
+                    </div>
+                </ul>
+                <br>
+                <h2 id="manual">Manual Calibration</h2>
+                <p>This is similar to how previous versions of KinectToVR worked with some added quality of life improvements like switching modes  and confirming without re-opening the dashboard and controls for precision movement.</p>
+                <ul>
+                    <li>After opening SteamVR, <strong data-toggle="tooltip" data-placement="top" title="K2EX Installer disables SteamVR Home because you can't see trackers in it. You can re-enable it afterwards. Though most of it's features are accessible through the SteamVR dashboard.">You should be in the empty SteamVR void.</strong> Open the SteamVR dashboard if it's not already open.</li>
+                    <li>Click on <strong data-toggle="tooltip" data-placement="top" title="It's in the bottom-left.">Desktop</strong> and open the <img src="../img/windows.svg" alt="Windows logo" style="vertical-align: -4%;"> Start menu. Then look for KinectToVR. It will be in a folder named K2EX.</li>
+                    <div class="alert alert-info" role="alert">
+                        <strong>You can make KinectToVR</strong> <a href="./autostart.html" class="alert-link">start with SteamVR automatically</a>
+                    </div>
+                    <li>When KinectToVR is opened, ensure that everything is working. <strong data-toggle="tooltip" data-placement="top" title="Reports errors from the Kinect SDK. (Xbox 360 only, Xbox One SDK doesn't have error messages.)">Kinect Status</strong>, <strong data-toggle="tooltip" data-placement="top" title="This is the status of the SteamVR (OpenVR) driver. Not Kinect or PSMove.">Driver Status</strong> and <strong>SteamVR Status</strong> should all say success.</li>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>If Kinect Status doesn't say Success!</strong> <a href="./kinectv1-troubleshooting.html" class="alert-link">click here for Xbox 360 Kinect</a> and <a href="./kinectv2-troubleshooting.html" class="alert-link">here for Xbox One Kinect</a>.
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>If Driver Status doesn't say Success!</strong> <a href="./minus10.html" class="alert-link">Click here to fix it.</a>
+                    </div>
+                    <li>Click <strong data-toggle="tooltip" data-placement="top" title="It could cause extra lag when playing a game so you should disable it after.">Show/Hide Skeleton Tracking</strong> to ensure the Kinect can see you properly.</li>
+                    <div class="alert alert-info" role="alert">
+                        <strong>You should be standing about 3 meters away from the Kinect for tracking to work. If you don't, the trackers will pile into each other in VR.</strong><br><a href="./no-tracking.html" class="alert-link">What if my Kinect isn't tracking?</a>
+                    </div>
+                    <li>Click the checkbox labelled <strong>Enable Manual Calibration</strong>.</li>
+                    <li>Click on <strong>Begin Calibration</strong>.</li>
+                    <li>Close the SteamVR dashboard to be left in the empty void.</li>
+                    <li>Use the VR controllers to move/rotate the trackers into position to line up with your body.</li>
+                </ul>
+                <div class="container" style="text-align: center; padding: 1em;">
+                    <img src="../img/manual-controls.svg" alt="manual calibration controls">
+                </div>
+                <div class="alert alert-info" role="alert">
+                    <strong>Your VR playspace orientation should point towards the side where the Kinect is. There's an arrow on the floor in SteamVR that shows it.</strong><br><a href="./reset-playspace.html" class="alert-link">How to change my playspace orientation.</a>
+                </div>
+                <ul>
+                    <li>When you're done, <strong>hold both triggers to finish calibration</strong>.</li>
+                    <li>That's it for calibration. There's <a href="./improve-tracking">many ways to improve your tracking.</a> if you want. Now go play.</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

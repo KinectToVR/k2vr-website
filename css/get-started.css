@@ -1,0 +1,44 @@
+@keyframes page-entry {
+    from {
+        opacity: .3;
+        transform: translateX(-6em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+body{
+    background-color: #222222;
+    color: #fff;
+}
+
+.container{
+    border: 3px white solid;
+    padding: 3em 5em;
+    border-radius: 4px;
+    margin-top: 2em;
+    animation-name: page-entry;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.container p{
+    font-size: x-large;
+}
+
+.container h1{
+    font-weight: 500;
+    margin-left: -0.2em;
+    margin-bottom: .5em;
+}
+
+.col-icon{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: .5em;
+    margin-right: 1em;
+}

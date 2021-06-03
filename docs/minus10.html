@@ -56,8 +56,16 @@
                     <a href="https://discord.gg/YBQCRDG" class="alert-link">Join us on Discord</a> <strong>if you have any questions!</strong>
                 </div>
                 <h1>How to fix SERVER ERROR (Code: -10)</h1>
-                <h2>This is happening because the SteamVR driver associated with KinectToVR is disabled, blocked and/or unlisted from the drivers list.</h2>
-                <p>First, make sure it isn't disabled or blocked in SteamVR.</p>
+                <h3>This is happening because the SteamVR driver associated with KinectToVR is disabled, blocked and/or unlisted from the drivers list.</h3>
+                <div class="alert alert-danger" role="alert">
+                    <strong>REMINDER: KinectToVR only works on Windows 10 version 1809 or later. This is due to Win32 API requirements from the SteamVR driver.</strong>
+                    <br><strong>Even if the driver says it's enabled, it will silently crash on older versions of Windows.</strong>
+                </div>
+                <h2>For ALVR users:</h2>
+                <p>If you're using <a href="https://alvr-org.github.io">ALVR</a> it will disable other registered external SteamVR drivers by default.</p>
+                <h4>You can go to <a href="./alvr.html">this page</a> to see how to fix it.</h4>
+                <br>
+                <h2>Make sure the driver isn't disabled or blocked in SteamVR.</h2>
                 <div class="alert alert-warning" role="alert" style="margin-top: .3em;">
                     <strong>Check in ADD-ONS. Overlays is for making the actual KinectToVR application start with SteamVR. It is not the driver.</strong>
                 </div>

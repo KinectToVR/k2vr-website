@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>KinectToVR: Documentation | How to improve your tracking</title>
+        <meta property="og:title" content="KinectToVR: Full-Body Tracking"/>
+        <meta name="description" content="Documentation | How to improve your tracking"/>
+        <meta property="og:description" content="Documentation | How to improve your tracking"/>
+        <meta property="twitter:image:src" content="https://k2vr.tech/img/opengraph-docs.png"/>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="theme-color" content="#5E149D"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&family=M+PLUS+Rounded+1c:wght@600&display=swap&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="icon" type="image/ico" href="../img/favicon.ico">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    </head>
+    <body>
+        <ul class="nav justify-content-end">
+            <div class="logo">
+                <p class="logotype d-none d-md-block">KinectToVR</p>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://github.com/KinectToVR">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://discord.gg/YBQCRDG">Discord</a>
+            </li>
+        </ul>
+        <br>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="./index.html">Home</a>
+                    <span class="breadcrumb-item active">How to improve your tracking</span>
+                </nav>
+                <div class="alert alert-primary" role="alert" style="font-size: larger; line-height: 1.5em;">
+                    <strong data-toggle="tooltip" data-placement="top" title="Just like this one :)">Text in bold often has more info attached when you move your mouse over it!</strong>
+                    <br>
+                    <a href="https://discord.gg/YBQCRDG" class="alert-link">Join us on Discord</a> <strong>if you have any questions!</strong>
+                </div>
+                <h1 id="position">How to improve your tracking</h1>
+                <p>So, you've got KinectToVR working, but what's with all the hype? Why does everyone love Kinect so much? Does it feel like your tracking lacks quality or polish? This is the right place to make it better!</p>
+                <h3>Positioning the Kinect in the right spot</h3>
+                <p>Placing your Kinect in the optimal position and angle for your playspace is crucial to getting the best tracking you can out of it.</p>
+                <p>Generally, we recommend that you have a rather large room for Kinect tracking, because standing further away really does help with tracking accuracy.</p>
+                <div class="container" style="text-align: center; padding: 1em;">
+                    <img src="../img/position_guide.png" width="70%" alt="position guide">
+                </div>
+                <div class="alert alert-info" role="alert">
+                    <strong>Don't forget to recalibrate KinectToVR after moving the Kinect.</strong>
+                </div>
+                <p>Put the Kinect sensor around chest to head height, pointing down at no more than 25 degrees. How close you can get will vary with the sensor's position and angle.</p>
+                <p id="clothing">On average, you should stand at least 6ft (1.8m) away for the sensor to pick you up and to use automatic calibration. And 8ft (2.4m) away for the best tracking.</p>
+                <p>While your whole body should be visible for the best experience. It's possible to get away with tracking from the spine down.</p>
+                <p>If you're unsure about placing the Kinect, you can use <a href="./toolkit.html">Kinect Explorer</a> for Xbox 360 Kinect or <a href="./kinect-studio.html">Kinect Studio</a> with the Xbox One Kinect. This way you can see the Kinect camera feed and better place it.</p>
+                <h3>Wearing Kinect-friendly clothes</h3>
+                <p>Because Kinect uses infrared light to create a depth map, if your clothes don't reflect IR very well, the Kinect might have a hard time seeing you.</p>
+                <p id="room">Also, because the skeleton tracking is based on the movement of your physical body, wearing baggy clothes will lead to worse tracking.</p>
+                <p>Generally, check what your clothes are made of and ask Google if it reflects infrared. You can also use the two apps linked above to see the infrared camera view and make sure the Kinect can capture your body outline properly.</p>
+                <h3>Clearing out your playspace</h3>
+                <p>This goes hand in hand with the previous two items, if there's reflective objects, obstructions or other disruptions in your playspace that the Kinect can see, it may confuse it when attempting to discern what is the room and what is you.</p>
+                <p>The infrared view of the Kinect is once again super useful for this.</p>
+                <h3 id="filters">Using filters for smoother tracking</h3>
+                <p>If you check the Options tab in KinectToVR, you'll see the last dropdown refers to positional tracking filters. These allow for more responsive or smoother movement.</p>
+                <p>Here's a list of the filters and what they do:</p>
+                <ul>
+                    <li><strong>Extended Kalman:</strong> Very smooth, but also very slow as a result. Useful for laying down or just striking poses.</li>
+                    <li><strong>Lowpass:</strong> Looks almost as smooth as Kalman, but with less delay, if you can put up with the reduced responsiveness, using it almost feels like you're wearing Vive trackers. It's my personal recommendation.</li>
+                    <li><strong>Linear Interpolation:</strong> Very fast! This is the raw skeleton tracking but with extra frames in-between with no curves, it looks accurate to what the Kinect tracks, but feels faster. It has a tendency to show jitter more though, so it's mostly recommended if using FBT for gameplay like in Blade & Sorcery or the FeetSaber mod.</li>
+                    <li><strong>No Filter:</strong> Direct output from the Kinect at 30hz. This is the default.</li>
+                </ul>
+                <h3 id="owotrack">Replacing your waist tracker with owoTrack</h3>
+                <p>Last but not least, the Kinect's hip, as you may have noticed yourself, is kinda slow, much slower than the feet. Because of how the skeleton tracking works, there isn't much that can be done. But what you can do, is remove the hip entirely and replace it with a phone!</p>
+                <p>If you wish to use owoTrack with KinectToVR, you should <a href="https://discord.gg/ttDkJqKDXX">join their Discord server</a> and follow the instructions there.</p>
+                <p>A channel in the list named <code>#use-with-k2vr</code> has instructions on disabling the Kinect hip.</p>
+
+            </div>
+        </div>
+    </body>
+</html>

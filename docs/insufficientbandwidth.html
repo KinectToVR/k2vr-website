@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>KinectToVR: Documentation | ALVR tips & tricks</title>
+        <title>KinectToVR: Documentation | How to fix E_NUI_INSUFFICIENTBANDWIDTH</title>
         <meta property="og:title" content="KinectToVR: Full-Body Tracking"/>
-        <meta name="description" content="Documentation | ALVR tips & tricks"/>
-        <meta property="og:description" content="Documentation | ALVR tips & tricks"/>
+        <meta name="description" content="Documentation | How to fix E_NUI_INSUFFICIENTBANDWIDTH"/>
+        <meta property="og:description" content="Documentation | How to fix E_NUI_INSUFFICIENTBANDWIDTH"/>
         <meta property="twitter:image:src" content="https://k2vr.tech/img/opengraph-docs.png"/>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="theme-color" content="#5E149D"/>
@@ -47,34 +47,33 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <nav class="breadcrumb">
-                    <a class="breadcrumb-item" href="./index.html">Home</a>
-                    <span class="breadcrumb-item active">ALVR tips & tricks</span>
+                    <a class="breadcrumb-item" href="index.html">Home</a>
+                    <span class="breadcrumb-item active">How to fix E_NUI_INSUFFICIENTBANDWIDTH</span>
                 </nav>
                 <div class="alert alert-primary" role="alert" style="font-size: larger; line-height: 1.5em;">
                     <strong data-toggle="tooltip" data-placement="top" title="Just like this one :)">Text in bold often has more info attached when you move your mouse over it!</strong>
                     <br>
                     <a href="https://discord.gg/YBQCRDG" class="alert-link">Join us on Discord</a> <strong>if you have any questions!</strong>
                 </div>
-                <h1>ALVR tips & tricks</h1>
-                <h2>How to register the driver</h2>
-                <p>By default, ALVR will disable every other external SteamVR driver and only enable it's own to reduce risks of incompatibility or running into issues with setup.</p>
-                <p>You can still make ALVR work with other drivers by going to the <strong>ALVR dashboard</strong> window, then <strong>Installation</strong>, and clicking on <strong>Register ALVR Driver</strong>. You will need to restart SteamVR after.</p>
-                <div class="container" style="text-align: center; padding: 1em;">
-                    <video src="../img/alvr_register_driver.mp4" autoplay="true" muted loop></video>
-                </div>
-                <h4>If you still cannot load the KinectToVR driver after doing this, return to the <a href="./minus10.html">Server Error fixes page</a> and follow from there.</h4>
-                <div class="alert alert-warning" role="alert" style="margin-top: .3em;">
-                    <strong>While you're here, before restarting ALVR, you should enable the setting below as well for a better experience.</strong>
-                </div>
-                <br>
-                <h2>Changing tracking to stage centered</h2>
-                <p>To use other tracking spaces in SteamVR, such as with KinectToVR, you should change ALVR's tracking space from head-centered to stage-centered, so that the center of your SteamVR playspace stays aligned with your Oculus guardian.</p>
-                <p>You can do this by going to the <strong>ALVR dashboard</strong> then clicking on <strong>Settings</strong>, <strong>Headset</strong> and finally choosing <strong>Stage (Room centered)</strong>.</p>
-                <p>You should restart SteamVR after doing this.</p>
-                <div class="container" style="text-align: center; padding: 1em;">
-                    <video src="../img/alvr_stage_centered.mp4" autoplay="true" muted loop></video>
-                </div>
-                <br>
+                <h1>How to fix E_NUI_INSUFFICIENTBANDWIDTH</h1>
+                <p>While this error can be caused by a software problem (specifically with Windows services) most of the time it's due to a USB conflict or a cheap extension cord.</p>
+                <h3>Kinect Management Service</h3>
+                <ul>
+                    <li>Open Windows Search (Press  <img src="../img/windows.svg" alt="Windows logo" style="vertical-align: -4%;"> and type in <code>Services</code> and choose the application that appears at the top.)</li>
+                    <img src="../img/services_search.png" alt="Start menu search result for Services">
+                    <li>Scroll down the services list until you find "Kinect Management"</li>
+                    <li>Ensure that the service reports "Running" under the "Status" row.</li>
+                    <li>If it isn't, double-click on the Kinect Management service item to open it's properties window.</li>
+                    <li>In the "Startup" dropdown, choose the option labelled "Automatic".</li>
+                    <li>Under the "Service status" group, click the "Start" button.</li>
+                    <li>Finally, click "OK" then close the Services window.</li>
+                </ul>
+                <p>If the Kinect Management service was already running, this won't help fix your issue. You should move on to other steps.</p>
+                <h3>USB hubs and extensions</h3>
+                <p>If you have your Kinect connected via a USB hub or a USB extension cord, you should try to run it without, even if it means putting it in a non-ideal spot for tracking, as this is only for testing.</p>
+                <p>Extension cords and hubs can often have low-quality wiring which causes signal degradation and reduces the maximum bandwidth that the cable can support.</p>
+                <h3>USB conflicts</h3>
+                <p>See the <a href="./notgenuine.html">E_NUI_NOTGENUINE</a> page for instructions on fixing USB bandwidth and conflict issues.</p>
             </div>
         </div>
     </body>

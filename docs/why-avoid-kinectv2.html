@@ -142,13 +142,14 @@
                 <p>Due to extra provisions for tracking resiliency, this issue can be somewhat alleviated when using 2.0 devices (2018 Vive Trackers, Vive Pro, Valve Index, Valve Index controllers, applicable Pimax headsets) and 2.0 base stations (Vive Pro Full Kit, and Valve Index base stations)</p>
                 <p>But even with the best setup possible, you will still have large dead spots where tracking either goes haywire or simply stops.</p>
                 <h3>Foot rotation issues and "the fog"</h3>
-                <p>Seemingly out of nowhere, around September 2020, we started hearing a lot of complaints Kinect One users that their foot rotation was glitching out.</p>
-                <p>Essentially, unless the feet were about 1.5ft off the ground, the Kinect could not tell the difference between their feet and the floor.</p>
-                <p>While trying to infer foot rotation from the skeleton tracking, the Kinect ends up rotating the foet randomly and sporadically.</p>
+                <p>As of K2EX 0.9, the smoothing for foot rotation finally works, and if it's still not enough, we added math-based rotation that uses the angle between the shin and the ankle to calculate foot orientation. Similar to Xbox 360 Kinect.</p>
+                <p><strike>Seemingly out of nowhere, around September 2020, we started hearing a lot of complaints Kinect One users that their foot rotation was glitching out.</strike></p>
+                <p><strike>Essentially, unless the feet were about 1.5ft off the ground, the Kinect could not tell the difference between their feet and the floor.</strike></p>
+                <p><strike>While trying to infer foot rotation from the skeleton tracking, the Kinect ends up rotating the foet randomly and sporadically.</strike></p>
                 <div class="container" style="text-align: center; padding: 1em;">
                     <video src="../img/v2_foot_glitch.mp4" autoplay="true" muted loop controls></video>
                 </div>
-                <p>Almost a year later as of writing this, we've learned a few things, but don't have a perfect fix still. Everything is trial and error and we're currently recommending people put black rugs on the floor.</p>
+                <p><strike>Almost a year later as of writing this, we've learned a few things, but don't have a perfect fix still. Everything is trial and error and we're currently recommending people put black rugs on the floor.</strike></p>
                 <h3>In conclusion</h3>
                 <p>While the Xbox One Kinect seems like a great device on paper, it's clear that the implementation was botched, especially outside of the actual Xbox ecosystem. If you've stumbled upon this page with the intent of playing JUst Dance on your Xbox One S, ignore my ramblings and go buy it already dammit.</p>
                 <p>Just get a 360.</p>

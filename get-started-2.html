@@ -42,13 +42,23 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container justify-content-end">
                 <p class="gs-progress">2 / 3</p>
-                <h1 class="display-3">Compatible devices</h1>
+                <h1 class="display-3">Device compatibility</h1>
+                <div class="row">
+                    <div class="col-1 col-icon" style="background-image: url(img/webcam-no.svg); background-size: 5em; height: 6em;">
+                    </div>
+                    <div class="col">
+                        <h2>Webcam</h2>
+                        <p><span style="color: rgb(251, 20, 89); font-weight: 800;">INCOMPATIBLE!</span> Off-the-shelf webcams cannot work with KinectToVR because they lack the additional depth-sensing hardware found in a Kinect.</p>
+                        <p>You should check out <a href="https://github.com/ju1ce/April-Tag-VR-FullBody-Tracker">AprilTags</a> or <a href="https://github.com/ju1ce/Mediapipe-VR-Fullbody-Tracking">Mediapipe</a> instead.</p>
+                    </div>
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-1 col-icon" style="background-image: url(img/kinect360.svg);">
                     </div>
                     <div class="col">
                         <h2>Xbox 360 Kinect / Kinect for Windows V1</h2>
-                        <p><strong>This is the recommended sensor.</strong> It supports all features, such as foot rotation and turning around.</p>
+                        <p>This Kinect model is recommended. All features of K2EX will work with it. But it may not fit for smaller rooms. <a href="https://discord.gg/YBQCRDG">We can help you figure this out over on Discord</a></p>
                     </div>
                 </div>
                 <br>
@@ -57,9 +67,9 @@
                     </div>
                     <div class="col">
                         <h2>Xbox One Kinect / Kinect for Windows V2</h2>
-                        <p>This works with KinectToVR but <strong>it has many hardware and software issues that may hamper your experience.</strong></p>
+                        <p>While fully compatible, you may run into tracking instability and a have a hard time getting the device to work properly.</p>
                         <div class="alert alert-warning" role="alert" style="background:transparent; border: 3px #ff0 solid; color: #ff0;">
-                            <strong style="font-size: large;">We strongly recommend AGAINST buying the Xbox One Kinect for reasons stated on --> </strong> <a href="docs/why-avoid-kinectv2.html" class="alert-link" style="color: #ff0; margin-left: .1em;"> this page</a>
+                            <strong style="font-size: large;">We recommend against buying the Xbox One Kinect for reasons stated on --> </strong> <a href="docs/why-avoid-kinectv2.html" class="alert-link" style="color: #ff0; margin-left: .1em;"> this page</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +79,7 @@
                     </div>
                     <div class="col">
                         <h2>PlayStation Move + PlayStation Eye</h2>
-                        <p><strong>Requires 3 PS Move controllers and at least 2 PS Eye cameras. </strong> The hardware and system resource requirements are much higher. While the tracking quality is excellent (equivalent to Vive trackers) setting it up is not for the faint of heart.</p>
+                        <p>System resource usage is much higher. The setup is long and complicated, and you will need 3 PS Move controllers and at least 2 PS Eye cameras.<br>Only do this if you already own all the hardware.</p>
                     </div>
                 </div>
                 <br>

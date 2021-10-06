@@ -46,10 +46,12 @@ body{
     background: transparent;
     color: #fff;
     border-radius: 4px;
+    transition: all 0.2s ease-in-out!important;
 }
 .nav-link:hover{
     background: var(--k2ex-gradient);
     color: white;
+    transition: all 0.2s ease-in-out!important;
 }
 
 .btn{

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>KinectToVR: Documentation | First-time setup and calibration</title>
+        <meta property="og:title" content="KinectToVR: Full-Body Tracking"/>
+        <meta name="description" content="Documentation | First-time setup and calibration"/>
+        <meta property="og:description" content="Documentation | First-time setup and calibration"/>
+        <meta property="twitter:image:src" content="https://k2vr.tech/img/opengraph-docs.png"/>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="theme-color" content="#5E149D"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&family=M+PLUS+Rounded+1c:wght@600&display=swap&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="icon" type="image/ico" href="../img/favicon.ico">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    </head>
+    <body>
+        <ul class="nav justify-content-end">
+            <a href="../index.html"><div class="logo">
+                <p class="logotype d-none d-md-block">KinectToVR</p>
+            </div></a>
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://github.com/KinectToVR">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://discord.gg/YBQCRDG">Discord</a>
+            </li>
+        </ul>
+        <br>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="./index.html">Home</a>
+                    <span class="breadcrumb-item active">First-time setup and calibration</span>
+                </nav>
+                <div class="alert alert-primary" role="alert" style="font-size: larger; line-height: 1.5em;">
+                    <strong data-toggle="tooltip" data-placement="top" title="Just like this one :)">Text in bold often has more info attached when you move your mouse over it!</strong>
+                    <br>
+                    <a href="https://discord.gg/YBQCRDG" class="alert-link">Join us on Discord</a> <strong>if you have any questions!</strong>
+                </div>
+                <h1>First-time setup and calibration</h1>
+                <h2>Placing the Kinect in the right spot</h2>
+                <p>Before using your Kinect, you should spend some time finding the best spot for it. This alone will improve your tracking a lot.</p>
+                <p>Depending on your setup, which Kinect you have, how tall you are and how much space you have, you'll be placing the Kinect differently.</p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p>The Kinect should be <strong>perpendicular to your playspace</strong>. This means not in a corner at an angle. Especially because headsets like Quest and Quest 2 do not allow for non 90-degree playspace orientation.</p>
+                        <p>You want the Kinect around head height, it can be a bit lower for Kinect One because it has a much taller vertical FOV.</p>
+                        <p>While your whole body should be visible for the best experience. It's possible to get away with tracking from the spine down.</p>
+                        <p>If you're unsure about placing the Kinect, you can use <a href="./toolkit.html">Kinect Explorer</a> for Xbox 360 Kinect or <a href="./kinect-studio.html">Kinect Studio</a> with the Xbox One Kinect. This way you can see the Kinect camera feed and better place it.</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="container" style="text-align: right;">
+                            <img src="../img/position_guide_new.png" width="100%" alt="position guide">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>Once you're done with this, we can launch K2EX.</p>
+                <h2>Launching KinectToVR</h2>
+                <p>K2EX needs SteamVR to be running and displaying to the headset before it can launch. Failing that, it will show a white screen then exit.</p>
+                <p>When using wireless streaming for your headset like Air Link, Virtual Desktop or ALVR, that should be started first.</p>
+                <p>If you wish to have the app start automatically once SteamVR is up. <a href="autostart.html">You can set that up here.</a></p>
+                <p>If everything went fine, you should see this at the top. Feel free to change the font size if it's too small.</p>
+                <img src="../img/steamvr_success.png" alt="">
+                <br>
+                <br>
+                <div class="alert alert-info" role="alert">
+                    <strong>Driver Status refers to the SteamVR driver, not the Kinect.</strong>
+                </div>
+                <p><strong>If you have an error with the driver,</strong> you can fix it here: <a href="minus10.html">How to fix SERVER ERROR (Code: -10)</a></p>
+                <p><strong>If you have have a Kinect error</strong> you can read <a href="kinectv1-troubleshooting.html">here</a> for the Xbox 360 Kinect. And <a href="kinectv2-troubleshooting.html">here</a> for the Xbox One Kinect.</p>
+                <br>
+                <p>You should now be able to click <strong>Spawn Trackers</strong></p>
+                <h2>Calibrating the trackers</h2>
+                <p>You're now in VR and have the trackers moving, but they're not aligned to you.</p>
+                <p>Click on <strong>Begin Calibration</strong> to start the process. Instructions are written on the calibration button and below.</p>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="../img/calibration-position.svg" alt="">
+                    </div>
+                    <div class="col-10">
+                        <ul>
+                            <li>You need to move in <strong>three different positions</strong>. The Kinect should be able to see your entire body in each step.</li>
+                            <li>There's a countdown for each position before it captures it. <strong>You should be standing still when the countdown hits zero.</strong></li>
+                            <li>After all position captures are done. <strong>You should look in the direction of the playspace where your Kinect is.</strong> <br>This means if your Kinect is off-center, you should look to the side where your Kinect is, not directly at the Kinect.</li>
+                            <div class="alert alert-info" role="alert">
+                                <strong>Your VR playspace orientation should point towards the side where the Kinect is. There's an arrow on the floor in SteamVR that shows it.</strong>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <p>If it fails, you can either try again, or use <a href="calibration.html#manual">manual calibration.</a></p>
+                <h2>Other useful bits</h2>
+                <p>You can play around with the filters and rotation settings for the feet and hip in the options tab.</p>
+                <p>It's also possible to disable the hip tracker to use something else like a third Rift controller, a Vive tracker or a phone with OwoTrack. <strong>(We highly recommend you give OwoTrack a go because it complements Kinect very well and makes your hip movements more accurate.)</strong></p>
+                <br>
+                <p>You should <a href="https://discord.gg/YBQCRDG">join the Discord</a> if you haven't done so already to stay informed on the latest news and get fast support if you run into any issues.</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>

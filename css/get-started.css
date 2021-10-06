@@ -10,6 +10,18 @@
     }
 }
 
+@keyframes panel-entry {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body{
     background-color: #222222;
     color: #fff;
@@ -18,19 +30,202 @@ body{
 .gs-progress{
     line-height: 0;
     position: absolute;
-    margin-left: -4.2em;
+    margin-left: -3em;
     margin-top: -3.5em;
 }
 
-.container{
-    border: 3px white solid;
-    padding: 3em 5em;
+.gs-panel{
+    width: 100%;
+    padding: 1em;
+    background-color: #444444;
+    height: 30em;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    flex-direction: row;
+    opacity: 0;
+}
+
+.gs-panel-half{
+    width: 100%;
+    padding: 1em;
+    background-color: #444444;
+    height: 14.375em;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
+    opacity: 0;
+}
+
+.gs-panel, .gs-panel-half{
+    box-shadow: #00000096 0 4px 10px -3px;
+    transition: all .3s ease-in-out!important;
+}
+
+.gs-panel:hover, .gs-panel-half:hover{
+    box-shadow: #00000096 0 4px 16px 1px;
+    transition: all .3s ease-in-out!important;
+    margin-top: -8px;
+}
+
+.gs-icon-container{
+    height: 9em;
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gs-title{
+    font-size: 1.5em!important;
+    line-height: 1.2em;
+    font-weight: 600;
+    align-self: center;
+}
+
+.gs-button{
+    font-size: 1.1em!important;
+    line-height: 3.5em;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+    display: inline-block;
     border-radius: 4px;
+    background-color: #00000033;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.gs-button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.gs-button:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.download-panel .gs-button:after{
+    height: 29%;
+}
+
+.gs-button:hover{
+    transition: background-color 0.2s ease-in-out;
+    background-color: #00000066;
+    color: #fff;
+}
+
+.gs-version-info{
+    font-size: .9em!important;
+    display: flex;
+    text-align: left;
+}
+
+.gs-old-versions{
+    font-size: .9em!important;
+    display: flex;
+    text-align: left;
+    color: #fff;
+    margin-top: -1em;
+}
+.gs-old-versions:hover{
+    color: #fff;
+}
+
+.gs-description{
+    font-size: .9em!important;
+    line-height: 1.3em;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1em;
+}
+
+.download-panel{
+    background: linear-gradient(315deg, rgba(122,39,203,1) 0%, rgba(164,53,157,1) 100%);
+    animation-name: panel-entry;
+    animation-delay: 0ms;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.download-panel .gs-icon-container{
+    background-image: url(../img/download-icon.svg);
+    filter: drop-shadow(0px 2px 19px #e113dd);
+}
+
+.onboarding-panel{
+    background: linear-gradient(315deg, rgba(32,20,26,1) 0%, rgba(103,25,103,1) 100%);
+    animation-name: panel-entry;
+    animation-delay: 100ms;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.onboarding-panel .gs-icon-container{
+    background-image: url(../img/onboarding-icon.svg);
+    filter: drop-shadow(0px 2px 19px #a511bb);
+}
+
+.docs-panel{
+    background: linear-gradient(184deg, rgba(77,16,95,1) 0%, rgba(42,45,61,1) 100%);
+    animation-name: panel-entry;
+    animation-delay: 200ms;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.docs-panel .gs-icon-container{
+    background-image: url(../img/docs.svg);
+    filter: drop-shadow(0px 2px 19px #64109c);
+}
+
+.discord-panel{
+    background: linear-gradient(184deg, rgba(43,47,59,1) 0%, rgba(10,22,72,1) 100%);
+    animation-name: panel-entry;
+    animation-delay: 300ms;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.discord-panel .gs-icon-container{
+    background-image: url(../img/discord.svg);
+    filter: drop-shadow(0px 2px 19px #2541a1);
+}
+
+.container{
+    /* border: 3px white solid; */
+    background-color: #2a2a2a;
+    padding: 3em 3.5em;
+    border-radius: 16px;
     margin-top: 2em;
     animation-name: page-entry;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     margin-bottom: 4em;
+    box-shadow: #00000033 0 8px 16px 1px;
 }
 
 .container p{

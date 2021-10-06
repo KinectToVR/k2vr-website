@@ -56,7 +56,47 @@
                     <a href="https://discord.gg/YBQCRDG" class="alert-link">Join us on Discord</a> <strong>if you have any questions!</strong>
                 </div>
                 <h1>How to fix E_NUI_NOTREADY</h1>
-                <p>Page incomplete</p>
+                <h2>This error usually happens because of a bugged driver install, purging the drivers entirely and then reinstalling them should do the trick.</h2>
+                <br>
+                <ul>
+                    <li>With your Kinect connected, open <strong data-toggle="tooltip" data-placement="top" title="Press Windows + X or right-click the start menu icon to access it quickly.">Device Manager</strong>.</li>
+                    <li>Right-click each device in the <strong>Kinect for Windows</strong> category then click <strong>Uninstall device</strong>.
+                    <br>You want to <strong>✓ Check</strong> the box that says <strong>Delete the driver software for this device.</strong></li>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Remove "Kinect for Windows Device" LAST! Or else everything will break.</strong>
+                    </div>
+                    <img src="../img/uninstall_device_k4w.png" alt="">
+                    <br>
+                    <br>
+                    <img src="../img/delete_driver.png" alt="">
+                    <br>
+                    <br>
+                    <li>Unplug the Kinect from the PC.</li>
+                    <li>Open <strong data-toggle="tooltip" data-placement="top" title="Press Windows + i to get there faster.">Windows Settings</strong> and go to apps.</li>
+                    <li>Search "Kinect" in the <strong>right search box</strong> then uninstall everything besides KinectToVR.</li>
+                    <li>Restart your PC.</li>
+                    <br>
+                    <li>Open Windows Update and ensure that your computer is fully up-to-date.</li>
+                    <li>Go to Windows Security (Windows Defender) then Click on <strong>Device Security</strong> > <strong>Core Isolation</strong> and ensure that <strong>Memory Integrity</strong> is disabled.
+                        <div class="alert alert-info" role="alert">
+                            <strong>You can re-enable it after successfully re-installing the Kinect drivers.</strong>
+                        </div></li>
+                    <li><a href="https://download.microsoft.com/download/E/1/D/E1DEC243-0389-4A23-87BF-F47DE869FC1A/KinectSDK-v1.8-Setup.exe">Download</a> and install the Kinect for Windows SDK v1.8</li>
+                    <li><strong>Only after the installation has completed</strong> you can reconnect the Kinect to your PC.</li>
+                    <li>You should see <strong>four devices</strong> show up in the <strong>Kinect for Windows</strong> category in Device Manager as shown earlier.</li>
+                    <li>If you see all 4, you're good to go. If you don't follow with the extra steps below</li>
+                </ul>
+                <h2>Some devices are still missing</h2>
+                <ul>
+                    <li>Expand the <strong>Other Devices</strong> category in Device Manager</li>
+                    <li>You should see devices with names such as <strong>Audios, Xbox NUI Camera, Kinect for Windows Security Control, e.t.c.</strong></li>
+                    <li>Right-click each of those and click <strong>Uninstall device</strong></li>
+                    <li><strong>LEAVE THE BOX <u>UNCHECKED</u></strong> then click Uninstall.</li>
+                    <li>Once all Kinect-related devices have been removed from "Other Devices", unplug and replug the Kinect from your PC.</li>
+                    <li>All 4 devices should now appear in <strong>Kinect for Windows</strong>.</li>
+                </ul>
+                <br>
+                <br>
             </div>
         </div>
     </body>

@@ -15,6 +15,13 @@ body{
     color: #fff;
 }
 
+.gs-progress{
+    line-height: 0;
+    position: absolute;
+    margin-left: -4.2em;
+    margin-top: -3.5em;
+}
+
 .container{
     border: 3px white solid;
     padding: 3em 5em;
@@ -23,6 +30,7 @@ body{
     animation-name: page-entry;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    margin-bottom: 4em;
 }
 
 .container p{

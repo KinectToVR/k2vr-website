@@ -77,8 +77,12 @@
                     <img src="../img/steamvr_success.png" alt="">
                 </div>
                 <h2>If the driver wasn't in the add-ons list.</h2>
-                <p>Press  <img src="../img/windows.svg" alt="Windows logo" style="vertical-align: -4%;"> + <strong>R</strong> to open the Run dialog, and paste in <code>notepad %localappdata%/openvr/openvrpaths.vrpath</code> then press <strong>Enter</strong> to open it.</p>
-                <p>This file is is your folder list for SteamVR. it contains paths to every <strong data-toggle="tooltip" data-placement="top" title="Except those that are stored/copied directly in the SteamVR folder.">driver</strong>, your config and logs.</p>
+                <p>This means the driver is missing from <code>openvrpaths.vrpath</code>, the file that SteamVR reads to find various important directories, including external drivers.</p>
+
+                <p>Press  <img src="../img/windows.svg" alt="Windows logo" style="vertical-align: -4%;"> + <strong>R</strong> to open the Run dialog, and paste in <code>%localappdata%/openvr</code> then press <strong>Enter</strong> to open the folder in a file explorer.</p>
+                <p>Download this file: <a class="file-download-link" href="https://k2vr.tech/openvrpaths.vrpath" download="openvrpaths.vrpath">openvrpaths.vrpath</a></p>
+                <p>Drag it to the folder, and click yes to overwrite the existing file.</p>
+                <!-- <p>This file is is your folder list for SteamVR. it contains paths to every <strong data-toggle="tooltip" data-placement="top" title="Except those that are stored/copied directly in the SteamVR folder.">driver</strong>, your config and logs.</p>
                 <p>We're going to edit the <code>external_drivers</code> section to include a reference to the folder where the KinectToVR driver is stored. By default this is in <code>C:\K2EX\KinectToVR</code> but because the paths are in quotes. you need to double the <code>\</code> characters into <code>\\</code> to <strong data-toggle="tooltip" data-placement="top" title="In programming, escaping means using an uncommon character, in this case, backslash, followed by other characters to represent characters such as newlines or quotation marks themselves inside of a string.">escape</strong> them.</p>
                 <div class="alert alert-warning" role="alert" style="margin-top: .3em;">
                     <strong>You must close SteamVR before saving! Otherwise the old settings will be saved automatically SteamVR is closed or restarted.</strong>
@@ -91,7 +95,7 @@
                 </div>
                 <div class="alert alert-warning" role="alert" style="margin-top: .3em;">
                     <strong>If your <code>external_drivers</code> value says <code>null</code>. Erase the word null and put the driver on a new line. Don't put a comma. Because it's the first and last in the list.</strong>
-                </div>
+                </div> -->
                 <p>After saving the file and re-opening SteamVR, go back to the top of the page and make sure the driver is enabled. Then launch KinectToVR again.</p>
                 <h2>I'm still having issues.</h2>
                 <p>If the driver is enabled and you restarted SteamVR after enabling it, and you're still getting the server error. Try checking if you have third-party firewall software that could be causing KinectToVR to be unable to connect to the driver.</p>

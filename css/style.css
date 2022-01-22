@@ -67,3 +67,28 @@ body{
 .btn-primary{
     background: var(--k2ex-gradient);
 }
+
+.file-download-link{
+    background: var(--background-accent);
+    color: white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out!important;
+    padding: .3em;
+    text-decoration: none;
+}
+
+/* download icon as before pseudo element */
+.file-download-link::before{
+    content: "";
+    display: inline-block;
+    margin: 4px;
+    padding-right: 1.1em;
+    position: relative;
+    vertical-align: middle;
+    background-image: url("../img/download-icon-old.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+}

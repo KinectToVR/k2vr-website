@@ -60,8 +60,10 @@
                 <strong>Unless specified, all mentions of "Xbox One Kinect" also refer to Kinect for Windows V2</strong>
                 <br>
                 <br>
-                <h3>1. USB Connection</h3>
-                <p>Before trying anything else, you should ensure that your Kinect can be detected properly by the computer. When you plug it in via USB, you should hear the Windows USB connection noise. And see it appear in <strong data-toggle="tooltip" data-placement="top" title="You can press Windows + M or right-click the Windows logo in the taskbar to quickly get to it.">Device Manager</strong></p>
+                <h3>1. Is the microphone muted?</h3>
+                <p>If the Kinect microphone is muted in Windows, that will cause the SDK to reboot the Kinect over and over in a loop. You should open the sound control panel, locate the Kinect's audio device entry and make sure it's unmuted, It's fine if the level is at 0, it just can't be muted or disabled.</p>
+                <h3>2. USB Connection</h3>
+                <p>Before trying anything else, you should ensure that your Kinect can be detected properly by the computer. When you plug it in via USB, you should hear the Windows USB connection noise. And see it appear in <strong data-toggle="tooltip" data-placement="top" title="You can press Windows + X or right-click the Windows logo in the taskbar to quickly get to it.">Device Manager</strong></p>
                 <div class="container" style="text-align: left; padding: 0em;">
                     <img src="../img/kinectv2-devicemanager.png" alt="">
                 </div>
@@ -75,13 +77,13 @@
                     <img src="../img/kinectv2_usbtreeview.png" alt="">
                 </div>
                 <br>
-                <h4>1a. Incompatible USB controllers</h4>
+                <h4>2a. Incompatible USB controllers</h4>
                 <p>Certain brands of USB controllers are fully incompatible with the Xbox One Kinect, namely VIA, ASMedia (3.0) and Fresco Logic controllers.</p>
                 <p>If you have a Ryzen-based PC or a modern Intel one with a motherboard that wasn't made by Asus, then you're probably fine.</p>
                 <p>If you don't have a compatible controller, and you're on a desktop with a free PCIe 1x slot, you can get a USB controller card to plug the Kinect into.</p>
                 <p>You can purchase a USB controller card with a Renesas controller (720201/720202) by searching on Amazon or other websites for "Renesas USB" or "720201 USB" <a href="https://www.amazon.com/s?k=renesas+usb">like here</a></p>
                 <br>
-                <h4>1b. The device is connected, but doesn't appear in K2EX.</h4>
+                <h4>2b. The device is connected, but doesn't appear in K2EX.</h4>
                 <p>In a case like this, you most likely want to update the Kinect driver to the one provided by Windows Update by right-clicking the device in Device Manager, and clicking "Update Device".</p>
                 <img src="../img/update_driver1.png" alt="">
                 <br>
@@ -91,7 +93,7 @@
                 <br>
                 <p>This will install the Kinect for Windows Runtime v2.2_1905 driver that was released for Windows 10 in 2019. K2EX Installer usually installs v2.0_1409 which was the last version to come with the full SDK, but it may not work for everyone.</p>
                 <br>
-                <h3>2. The Kinect is restarting on it's own every 10 to 15 seconds</h3>
+                <h3>3. The Kinect is restarting on it's own every 10 to 15 seconds</h3>
                 <p>There are multiple causes for the Kinect restarting, but if the time between disconnects is higher than about 5 seconds, then it's most likely a hardware issue that can be fixed by disconnecting the temperature sensor from the Kinect.</p>
                 <p>You will have to take off the back of the Kinect using a Torx T2 screwdriver and then cut the connection from the blue and yellow wires going to the fan. Then cover them up with electrical tape to avoid shorts.</p>
                 <div class="alert alert-primary" role="alert">
@@ -106,7 +108,7 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/BoRK3jJVMLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <br>
                 <br>
-                <h3>3. The Kinect is restarting on it's own every 2 to 5 seconds</h3>
+                <h3>4. The Kinect is restarting on it's own every 2 to 5 seconds</h3>
                 <p>A quick bootloop of the Kinect like this can be caused by a number of issues, ranging from software, to hardware, to cable connections.</p>
                 <p>You should ensure that the Kinect is properly connected at each end. The cable can actually be disconnected from the back of the Kinect itself, so make sure that's also firmly plugged in.</p>
                 <p>The rebooting can also be caused by a lack of bandwidth, so everything in Section 1 about USB still applies.</p>

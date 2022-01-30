@@ -84,11 +84,22 @@
                     </div>
                     <div class="col-10">
                         <ul>
-                            <li>You need to move in <strong data-toggle="tooltip" data-placement="top" title="There's an option in the app to change the number, DON'T TOUCH IT">3 different spots</strong>.</li>
-                            <li>There's a countdown for each position before the data capture. You should be standing still when it hits 0.</li>
-                            <li>After all 3 position captures are done. You should look in the direction of the playspace where your Kinect is. <br><strong>This means if your Kinect is off-center, you should look to the side where your Kinect is, not directly at the Kinect.</strong></li>
+                            <li>You need to move in <strong>three different positions</strong>. The Kinect should be able to see your entire body in each step.</li>
+                            <li>You should stand a good 1-2 steps away from the last position on each step.</li>
+                            <li>There's a countdown for each position before it captures it. <strong>You should be standing still when the countdown hits zero.</strong></li>
+                            <li>Calibration is complete!</li>
+                            <!-- <li>After all position captures are done. <strong>You should look in the direction of the playspace where your Kinect is.</strong> <br>This means if your Kinect is off-center, you should look to the side where your Kinect is, not directly at the Kinect.</li>
                             <div class="alert alert-info" role="alert">
-                                <strong>Your VR playspace orientation should point towards the side where the Kinect is. There's an arrow on the floor in SteamVR that shows it.</strong><br><a href="./reset-playspace.html" class="alert-link">How to change my playspace orientation.</a>
+                                <strong>Your VR playspace orientation should point towards the side where the Kinect is. There's an arrow on the floor in SteamVR that shows it.</strong>
+                            </div> -->
+                        </ul>
+                        <h3>If calibration fails</h3>
+                        <ul>
+                            <li>Calibrate again, changing your head level between positions.</li>
+                            <li>Increase the number of calibration points from the default of 3. Calibration will take longer, but this increases the likelihood of it working.</li>
+                            <li>Delete the K2EX configuration and try calibrating again, there's a button to do this in the Options tab.</li>
+                            <div class="alert alert-warning" role="alert" style="margin-top: .3em;">
+                                <strong>If that also doesn't work, follow through manual calibration as explained below</strong>
                             </div>
                         </ul>
                     </div>
@@ -96,9 +107,6 @@
                 <br>
                 <ul>
                     <li id="manual">That's it! You're all done! There's <a href="./bettertracking.html">many ways to improve your tracking.</a> if you want. Now go play.</li>
-                    <div class="alert alert-warning" role="alert" style="margin-top: .3em;">
-                        <strong>It's possible that automatic calibration can fail. If it did, you can either</strong> <a href="./fix-autocalibration.html" class="alert-link">attempt to fix it</a> <strong>or follow through manual calibration as explained below</strong>
-                    </div>
                 </ul>
                 <br>
                 <h2>Manual Calibration</h2>

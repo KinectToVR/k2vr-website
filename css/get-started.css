@@ -74,13 +74,20 @@ body{
 
 .gs-panel, .gs-panel-half{
     box-shadow: #00000096 0 4px 10px -3px;
-    transition: all .3s ease-in-out!important;
+    transition: box-shadow .3s ease-in-out;
 }
 
 .gs-panel:hover, .gs-panel-half:hover{
     box-shadow: #00000096 0 4px 16px 1px;
-    transition: all .3s ease-in-out!important;
-    margin-top: -8px;
+}
+
+.gs-panel-hovermove {
+    transition: transform .3s ease-in-out;
+}
+
+.gs-panel-hovermove:hover {
+
+    transform: translateY(-8px);
 }
 
 .gs-icon-container{

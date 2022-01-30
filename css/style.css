@@ -92,3 +92,8 @@ body{
     height: 1em;
     width: 1em;
 }
+
+strong[data-toggle="tooltip"] {
+    text-decoration: underline dashed;
+    cursor: help;
+}

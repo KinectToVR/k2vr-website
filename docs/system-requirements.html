@@ -56,6 +56,16 @@
                     <a href="https://discord.gg/YBQCRDG" class="alert-link">Join us on Discord</a> <strong>if you have any questions!</strong>
                 </div>
                 <h1>System Requirements</h1>
+                <h2>Cloud PCs</h2>
+                <p>Because of the nature of the Kinect and its proprietary drivers, USB forwarding applications such as VirtualHere will not work with Kinect. For similar reasons, PSMoveService and especially PS Eye cameras will not work either.</p>
+                <p>Services such as Shadow or Plutosphere can offer VR streaming because sending video back to you is a lot easier than you sending video to them.</p>
+                <br>
+                <p>Before someone comes and asks, we've done research into these things, there's simply no good way to implement it <i>for now</i>. Maybe in the future. But we would like to focus our efforts on local computer users for the time being.</p>
+                <h2>Virtual machines</h2>
+                <p>Simply put, if you're using kernel-mode virtualization software like QEMU/KVM (Pretty much any system that allows full PCIe GPU passthrough is KVM under the hood), then just like the GPU, you can pass through a full USB controller, or a USB PCIe add-on card.</p>
+                <p>Doing that will work for both Kinect models, and for PS Eye cameras.</p>
+                <p>Passing through just the Kinect device won't be enough because USB passthrough is vulnerable to CPU scheduling on the host OS, and will cause latency issues.</p>
+                <p>Additionally, the descriptor handshake for Kinect creates multiple devices internally, and all of them need to exist on the same root connector, which can't be done with software USB passthrough.</p>
                 <h2>Operating System</h2>
                 <p>There is a hard requirement for Windows 10 1809 or Windows 11 because the SteamVR driver is built with WinAPI thread descriptors which were only added in 1809. This means that while it's possible to get K2EX Installer and KInectToVR to launch even on Windows 7, you won't be able to add trackers.</p>
                 <p>As for Linux, it could happen but most likely won't because implementing the workaround needed to translate data from the Kinect received via libfreenect into an app running inside of Wine/Proton that then passes it to the official Kinect for Windows SDK would prove to be a royal pain. Linux FBT has a greater future with SteamVR tracked devices, and later SlimeVR (<a href="https://github.com/SlimeVR/SlimeVR-OpenVR-Driver/issues/2">support is planned</a>). If you're a full-time Linux VR advocate, I'm sorry, we can't help here.</p>

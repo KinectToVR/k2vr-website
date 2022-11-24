@@ -28,7 +28,7 @@ body{
 }
 
 .amethyst-warning{
-    background: #2B2B43;
+    background: #1b1b2a;
     padding:.8em 1.6em;
     padding-top: 1.2em;
     border-radius: 12px;
@@ -41,9 +41,10 @@ body{
 .amethyst-warning p{
     display: inline-block;
     height: 3em;
-    color: #1B1B27;
+    color: #0c0c13;
     border-radius: 6px;
     vertical-align: middle;
+    font-size: 1.6em;
     padding: 0 1em;
     line-height: 3em;
     background: linear-gradient(146deg, #51c0ff 0%, #f038b4 100%);

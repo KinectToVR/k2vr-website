@@ -26,3 +26,25 @@ body{
 .hero{
     height: auto;
 }
+
+.amethyst-warning{
+    background: #2B2B43;
+    padding:.8em 1.6em;
+    padding-top: 1.2em;
+    border-radius: 12px;
+    margin-top: 1em;
+    text-decoration: none!important;
+    color: white;
+    box-shadow: -2px 10px 37px 0px #000000bf;
+}
+
+.amethyst-warning p{
+    display: inline-block;
+    height: 3em;
+    color: #1B1B27;
+    border-radius: 6px;
+    vertical-align: middle;
+    padding: 0 1em;
+    line-height: 3em;
+    background: linear-gradient(146deg, #51c0ff 0%, #f038b4 100%);
+}

@@ -29,6 +29,8 @@ body{
 
 .logotype{
     line-height: 39px;
+    font-size: 58px;
+    font-weight: 600;
     vertical-align: middle;
     margin-left: 56px;
     color: #fff;

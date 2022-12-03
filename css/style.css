@@ -1,9 +1,9 @@
 :root{
-    --k2ex-gradient: linear-gradient(135deg, #7826CD, #A6369B);
+    --k2ex-gradient: linear-gradient(135deg, #39C5FF, #E33387);
     --background-primary: #121212;
     --background-secondary: #222222;
     --background-tertiary: #444444;
-    --background-accent: #551796;
+    --background-accent: #A369EB;
 }
 
 body{

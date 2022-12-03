@@ -1,11 +1,11 @@
 body{
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* background-image: url("./../../img/kinect360-cover.png"); */
     /* background-size: cover; */
     /* background-position: center; */
     color: #fff;
-    background-color: #000;
+    background-color: #1B1B27;
 }
 
 .display-3{
@@ -21,6 +21,11 @@ body{
 
 .nav{
     background: transparent;
+}
+
+.nav-container{
+    position: fixed;
+    width: 100vw;
 }
 
 .hero{
@@ -48,4 +53,41 @@ body{
     padding: 0 1em;
     line-height: 3em;
     background: linear-gradient(146deg, #51c0ff 0%, #f038b4 100%);
+}
+
+.btn{
+    font-size: 1.2em;
+    font-weight: 500;
+    padding:1em 2em;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
+.btn-primary{
+    background: transparent !important;
+    border: 2px solid white;
+    gap: .5em;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover, .btn-primary:active{
+    background: white !important;
+    border: 2px solid white;
+    color: #1f1f1f;
+    transition: all 0.2s ease;
+}
+
+.about-ame *{
+    z-index: -99;
+}
+
+.nav-bg{
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 6.5em;
+    width: 100%;
+    background-color: #2B2B43;
+    z-index: -1;
 }

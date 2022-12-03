@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>KinectToVR: Full-Body Tracking</title>
-        <meta property="og:title" content="KinectToVR: Full-Body Tracking"/>
-        <meta name="description" content="Free and open solution for Kinect body tracking"/>
+        <title>Amethyst by K2VR Team</title>
+        <meta property="og:title" content="Amethyst by K2VR Team"/>
+        <meta name="description" content="Open source VR body tracking for Kinect and other devices"/>
         <meta property="og:type" content="website">
-        <meta property="og:description" content="Free and open solution for Kinect body tracking"/>
+        <meta property="og:description" content="Open source VR body tracking for Kinect and other devices"/>
         <meta property="twitter:image:src" content="https://k2vr.tech/img/opengraph.png"/>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="theme-color" content="#5E149D"/>
+        <meta name="theme-color" content="#A369EB"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&family=M+PLUS+Rounded+1c:wght@600&display=swap&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&" rel="stylesheet"> 
@@ -40,6 +40,32 @@
         </script> -->
     </head>
     <body>
+        <div class="nav-bg"></div>
+        <div class="nav-container">
+            <ul class="nav justify-content-end">
+                <a href="index.html"><div class="logo">
+                    <p class="logotype d-none d-md-block">K2VR</p>
+                </div></a>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled logo" href="#">KinectToVR</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://docs.k2vr.tech/en/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://docs.k2vr.tech/">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://github.com/KinectToVR">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://discord.gg/YBQCRDG">Discord</a>
+                </li>
+            </ul>
+        </div>
         <div class="video-container" style="position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: -1;">
             <video autoplay="true" muted loop class="hero-video" poster="../assets/poster_new.jpg"
             style="position: absolute; left:50%; top:50%; height: 100%; width: 177.77777778vh; min-width: 100%; min-height: 56.25vw; transform: translate(-50%, -50%); filter: brightness(0.6);">
@@ -47,53 +73,26 @@
                 <source src="assets/new_loop.mp4" type="video/mp4">
             </video>
         </div>
-        <ul class="nav justify-content-end">
-            <a href="index.html"><div class="logo">
-                <p class="logotype d-none d-md-block">K2VR</p>
-            </div></a>
-            <!-- <li class="nav-item">
-                <a class="nav-link disabled logo" href="#">KinectToVR</a>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="docs/index.html">Documentation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="https://github.com/KinectToVR">GitHub</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="https://discord.gg/YBQCRDG">Discord</a>
-            </li>
-        </ul>
         <div class="container hero d-flex h-100">
-            <div class="row align-self-center" style="margin-top: -8em;">
+            <div class="row align-self-center" style="margin-top: -2em; text-align: center; width: 100%;">
                 <div class="col">
                     <div class="jumbotron-fluid">
-                        <div class="container">
-                            <h1 class="display-3">Free and open <br class="d-none d-lg-block">solution for Kinect <br class="d-none d-lg-block">body tracking</h1>
+                        <div class="container" style="text-align: center;">
+                            <h1 class="display-3" style="text-transform: initial;">Amethyst is next-generation <br class="d-none d-lg-block">open source body tracking. </h1>
                             <p class="lead" style="
                             text-shadow: 0px 0px 4px #000000;
                             -webkit-text-stroke-width: 1px;
                             -webkit-text-stroke-color: rgba(204, 204, 204, 0.5);
                             -webkit-text-fill-color: white;
-                            ">Get up and running in under 5 minutes.</p>
-                            <p class="lead">
-                                <a class="btn btn-primary btn-lg" href="get-started.html" role="button" style="padding:1em 2em; text-transform: uppercase; background: transparent !important; border: 2px solid white;">Get Started</a>
+                            font-size: 1.6em;
+                            ">Support for Kinect, PlayStation Move, owoTrack and more!</p>
+                            <p class="lead" style="display: flex; justify-content:space-evenly;">
+                                <a class="btn btn-primary btn-lg" href="https://docs.k2vr.tech/en/app/getting-started" role="button">🚀 Get Started</a>
+                                <a class="btn btn-primary btn-lg" href="https://discord.gg/YBQCRDG" role="button"><span style="position: relative; top: -3px;">⌨️</span> Discord</a>
+                                <a class="btn btn-primary btn-lg" href="#more-info" role="button">❓ More Info</a>
+                                <a class="btn btn-primary btn-lg" href="https://docs.k2vr.tech/en/roadmap" role="button">⌚ Roadmap</a>
                             </p>
-                            <a style="text-decoration: none;" href="https://docs.k2vr.tech/en/amethyst-transition">
-                                <div class="amethyst-warning">
-                                    <h1>Amethyst is replacing K2EX soon.</h1>
-                                    <h3>You should switch over as soon as possible.</h3>
-                                    <p>Click here for more info</p>
-                                    <!-- <br><sup>Please just click it.</sup> -->
-                                    <!-- I really wanted to add a stupid remark, but okay... -->
-                                </div>
-                            </a>
+                            <h3 style="top: 3em; position: relative;">Scroll down for more info</h3>
                         </div>
                     </div>
                 </div>
@@ -101,6 +100,35 @@
                     <img src="./../img/kinect-outline.png" class="img-fluid" alt="kinect outline">
                 </div> -->
             </div>
+        </div>
+        <div class="container about-ame d-flex h-100">
+            <span id="more-info"></span>
+            <div class="jumbotron" style="margin-top:9em;">
+                <div class="container">
+                    <h1>Amethyst is a brand new app from K2VR Team</h1>
+                    <h3>We've spent a long time rewriting a new fancy app from scratch to support full-body tracking today and tomorrow.</h3>
+                    <br>
+                    <img style="width: 100%;" src="assets/ame-main-window.png" alt="main wnidow of amethyst">
+                    <br><br><br>
+                    <h1>Here's some of the notable features</h1>
+                    <h3>Support for many devices!</h3>
+                    <p>By default, Amethyst supports Xbox 360 Kinect, Xbox One Kinect, PlayStation Move (+ PlayStation Eye) and owoTrack.</p>
+                    <p>You can actually add support for more devices via plugins. They're built to be simpler to make than a full SteamVR driver to ease development.</p>
+                    <h3>We have OSC! (In development)</h3>
+                    <p>Every supported device and plugin in Amethyst can communicate with a Meta Quest headset for OSC trackers.</p>
+                    <p>We plan on adding support for other OSC-based protocols like OSCQuery and VirtualMotionCapture.</p>
+                    <a class="btn btn-primary" href="https://docs.k2vr.tech/en/osc" role="button">📚 How to setup OSC for VRChat Quest</a>
+                    <br><br>
+                    <h3>Tracker freeze and skeleton flip</h3>
+                    <p>You can use a controller combo to pause tracking while in VR. This allows you to keep sitting or laying down poses for longer.</p>
+                    <p>Skeleton flip uses the orientation of your headset or external waist tracking data. (Either directly inside Amethyst or in SteamVR.) and uses it to allow the Kinect's skeleton tracking to turn around.</p>
+                    <h3>Easy calibration</h3>
+                    <p>We've worked a ton on making calibration in Amethyst as easy and reliable as ever. Make sure your head is tracked, put your headset on, and follow the video inside the app. You'll be done in 30 seconds!</p>
+                    <a class="btn btn-primary" href="https://docs.k2vr.tech/en/app/calibration" role="button">📚 Calibration instructions</a>
+                    <br><br>
+                </div>
+            </div>
+            
         </div>
     </body>
 </html>
